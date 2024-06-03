@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-monitor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-mt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-mt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-toolkit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/gyd-toolkit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/gyd-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gyd-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

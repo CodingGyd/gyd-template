@@ -1,0 +1,13 @@
+
+E
+java:S1066}"/Merge this if statement with the enclosing one.(ÿãº
+\
+java:S2184 "FCast one of the operands of this multiplication operation to a "long".(„ó
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ïäñæ
+‚
+java:S1130y"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(“»Š¤
+
+java:S1130„"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¢³³¦ıÿÿÿÿ8ãÍ¾âü1
+B
+java:S1068"'Remove this unused "log" private field.(¹±‚õıÿÿÿÿ
