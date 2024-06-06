@@ -3,7 +3,7 @@ package com.gydblog.common.enums;
 /**
  * 业务操作类型
  * 
- * @author ruoyi
+ * @author gyd
  */
 public enum BusinessType
 {

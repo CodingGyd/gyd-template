@@ -4,7 +4,7 @@ import com.gydblog.common.annotation.Excel;
 import com.gydblog.common.annotation.Excel.ColumnType;
 import com.gydblog.common.annotation.Excel.Type;
 import com.gydblog.common.annotation.Excels;
-import com.gydblog.common.config.RuoYiConfig;
+import com.gydblog.common.config.GydConfig;
 import com.gydblog.common.core.text.Convert;
 import com.gydblog.common.domain.R;
 import com.gydblog.common.exception.UtilException;
@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
 /**
  * Excel相关处理
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class ExcelUtil<T>
 {
@@ -1365,7 +1365,7 @@ public class ExcelUtil<T>
      */
     public String getAbsoluteFile(String filename)
     {
-        String downloadPath = RuoYiConfig.getDownloadPath() + filename;
+        String downloadPath = GydConfig.getDownloadPath() + filename;
         File desc = new File(downloadPath);
         if (!desc.getParentFile().exists())
         {

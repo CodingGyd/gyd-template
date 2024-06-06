@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 /**
  * 表格数据处理
  *
- * @author ruoyi
+ * @author gyd
  */
 public class TableSupport {
     @NotNull(message = "页码不能为空")

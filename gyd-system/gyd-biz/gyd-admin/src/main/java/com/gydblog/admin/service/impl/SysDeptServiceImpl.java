@@ -12,7 +12,7 @@ import com.gydblog.common.utils.SecurityUtils;
 import com.gydblog.common.utils.StringUtils;
 import com.gydblog.common.utils.spring.SpringUtils;
 import com.gydblog.admin.mapper.SysDeptMapper;
-import com.gydblog.base.mapper.SysRoleMapper;
+import com.gydblog.admin.mapper.SysRoleMapper;
 import com.gydblog.admin.service.ISysDeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 /**
  * 部门管理 服务实现
  * 
- * @author ruoyi
+ * @author gyd
  */
 @Service
 public class SysDeptServiceImpl implements ISysDeptService

@@ -10,7 +10,7 @@
     <module>gyd-core</module>
     <module>gyd-biz</module>
     <module>gyd-common</module>
-    <module>gyd-web</module>
+    <module>gyd-starter</module>
   </modules>
   <properties>
     <velocity.version>1.7</velocity.version>

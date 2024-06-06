@@ -4,8 +4,8 @@ import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.domain.R;
 import com.gydblog.common.domain.entity.SysResourceEntity;
 import com.gydblog.common.enums.ResBizTypeEnum;
-import com.gydblog.base.service.SysResourceService;
-import com.gydblog.base.web.service.SysPermissionService;
+import com.gydblog.admin.service.SysResourceService;
+import com.gydblog.admin.web.service.SysPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

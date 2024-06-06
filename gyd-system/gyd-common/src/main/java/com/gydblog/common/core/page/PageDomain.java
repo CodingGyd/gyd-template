@@ -6,7 +6,7 @@ import com.gydblog.common.utils.StringUtils;
 /**
  * 分页数据
  *
- * @author ruoyi
+ * @author gyd
  */
 public class PageDomain {
     /**

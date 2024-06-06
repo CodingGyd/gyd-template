@@ -52,17 +52,17 @@ public class GenConstants {
     /**
      * 页面不需要编辑字段
      */
-    public static final String[] COLUMNNAME_NOT_EDIT = {"id", "create_by", "create_time", "update_by", "update_time", "remarks", "del_flag"};
+    public static final String[] COLUMNNAME_NOT_EDIT = {"id", "create_user", "create_time", "update_user", "update_time", "remarks", "del_flag"};
 
     /**
      * 页面不需要显示的列表字段
      */
-    public static final String[] COLUMNNAME_NOT_LIST = {"id", "create_by", "update_by", "update_time", "remarks", "del_flag"};
+    public static final String[] COLUMNNAME_NOT_LIST = {"id", "create_user", "update_user", "update_time", "remarks", "del_flag"};
 
     /**
      * 页面不需要查询字段
      */
-    public static final String[] COLUMNNAME_NOT_QUERY = {"id", "create_by", "update_by", "update_time", "remarks", "del_flag"};
+    public static final String[] COLUMNNAME_NOT_QUERY = {"id", "create_user", "update_user", "update_time", "remarks", "del_flag"};
 
     /**
      * 文本框

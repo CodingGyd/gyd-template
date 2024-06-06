@@ -1,9 +1,9 @@
 package com.gydblog.base.service.impl;
 
+import com.gydblog.base.mapper.SysLoginLogMapper;
+import com.gydblog.base.service.SysLoginLogService;
 import com.gydblog.common.domain.PageResult;
 import com.gydblog.common.domain.entity.SysLoginLogEntity;
-import com.gydblog.base.service.SysLoginLogService;
-import com.gydblog.base.mapper.SysLoginLogMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 系统访问日志情况信息 服务层处理
  *
- * @author ruoyi
+ * @author gyd
  */
 @Service
 public class SysLoginLogServiceImpl implements SysLoginLogService {

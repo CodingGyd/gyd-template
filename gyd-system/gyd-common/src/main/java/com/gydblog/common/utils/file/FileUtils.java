@@ -1,6 +1,6 @@
 package com.gydblog.common.utils.file;
 
-import com.gydblog.common.config.RuoYiConfig;
+import com.gydblog.common.config.GydConfig;
 import com.gydblog.common.utils.DateUtils;
 import com.gydblog.common.utils.StringUtils;
 import com.gydblog.common.utils.uuid.IdUtils;
@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * 文件处理工具类
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class FileUtils
 {
@@ -68,7 +68,7 @@ public class FileUtils
      */
     public static String writeImportBytes(byte[] data) throws IOException
     {
-        return writeBytes(data, RuoYiConfig.getImportPath());
+        return writeBytes(data, GydConfig.getImportPath());
     }
 
     /**

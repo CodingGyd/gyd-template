@@ -3,7 +3,7 @@ package com.gydblog.common.constant;
 /**
  * 用户常量信息
  *
- * @author ruoyi
+ * @author gyd
  */
 public class UserConstants {
     /**

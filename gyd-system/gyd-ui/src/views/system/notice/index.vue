@@ -9,9 +9,9 @@
           @keyup.enter.native="handleQuery"
         />
       </el-form-item>
-      <el-form-item label="操作人员" prop="createBy">
+      <el-form-item label="操作人员" prop="createUser">
         <el-input
-          v-model="queryParams.createBy"
+          v-model="queryParams.createUser"
           placeholder="请输入操作人员"
           clearable
           @keyup.enter.native="handleQuery"
@@ -21,9 +21,9 @@
         <el-select v-model="queryParams.noticeType" placeholder="公告类型" clearable>
           <el-option
             v-for="dict in dict.type.sys_notice_type"
-            :key="dict.value"
-            :label="dict.label"
-            :value="dict.value"
+            :key="dict.dictValue"
+            :label="dict.dictLabel"
+            :value="dict.dictValue"
           />
         </el-select>
       </el-form-item>
@@ -88,7 +88,7 @@
           <dict-tag :options="dict.type.sys_notice_status" :value="scope.row.status"/>
         </template>
       </el-table-column>
-      <el-table-column label="创建者" align="center" prop="createBy" width="100" />
+      <el-table-column label="创建者" align="center" prop="createUser" width="100" />
       <el-table-column label="创建时间" align="center" prop="createTime" width="100">
         <template slot-scope="scope">
           <span>{{ parseTime(scope.row.createTime, '{y}-{m}-{d}') }}</span>
@@ -200,7 +200,7 @@ export default {
         pageNum: 1,
         pageSize: 10,
         noticeTitle: undefined,
-        createBy: undefined,
+        createUser: undefined,
         status: undefined
       },
       // 表单参数

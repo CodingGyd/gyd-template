@@ -14,10 +14,10 @@ import java.util.HashMap;
 @RestController
 public class SysIndexController {
 
-    @Value("${campus.version}")
+    @Value("${gydblog.version}")
     private String version;
 
-    @Value("${campus.frameworkVersion}")
+    @Value("${gydblog.frameworkVersion}")
     private String frameworkVersion;
 
     /**

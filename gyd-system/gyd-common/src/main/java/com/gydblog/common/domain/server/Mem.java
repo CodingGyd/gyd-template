@@ -5,7 +5,7 @@ import com.gydblog.common.utils.Arith;
 /**
  * 內存相关信息
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class Mem
 {

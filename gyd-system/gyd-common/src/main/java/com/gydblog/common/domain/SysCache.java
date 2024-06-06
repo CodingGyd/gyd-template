@@ -5,7 +5,7 @@ import com.gydblog.common.utils.StringUtils;
 /**
  * 缓存信息
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class SysCache
 {

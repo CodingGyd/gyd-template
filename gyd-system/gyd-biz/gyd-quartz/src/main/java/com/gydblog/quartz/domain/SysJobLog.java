@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * 定时任务调度日志表 sys_job_log
  * 
- * @author ruoyi
+ * @author gyd
  */
 @TableName("sys_job_log")
 public class SysJobLog extends BaseEntity

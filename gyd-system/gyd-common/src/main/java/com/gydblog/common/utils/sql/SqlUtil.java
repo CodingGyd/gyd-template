@@ -6,7 +6,7 @@ import com.gydblog.common.utils.StringUtils;
 /**
  * sql操作工具类
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class SqlUtil
 {

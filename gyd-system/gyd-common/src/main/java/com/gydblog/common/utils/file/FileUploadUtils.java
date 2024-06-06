@@ -1,6 +1,6 @@
 package com.gydblog.common.utils.file;
 
-import com.gydblog.common.config.RuoYiConfig;
+import com.gydblog.common.config.GydConfig;
 import com.gydblog.common.constant.Constants;
 import com.gydblog.common.exception.file.FileNameLengthLimitExceededException;
 import com.gydblog.common.exception.file.FileSizeLimitExceededException;
@@ -19,7 +19,7 @@ import java.util.Objects;
 /**
  * 文件上传工具类
  *
- * @author ruoyi
+ * @author gyd
  */
 public class FileUploadUtils
 {
@@ -36,7 +36,7 @@ public class FileUploadUtils
     /**
      * 默认上传的地址
      */
-    private static String defaultBaseDir = RuoYiConfig.getProfile();
+    private static String defaultBaseDir = GydConfig.getProfile();
 
     public static void setDefaultBaseDir(String defaultBaseDir)
     {
@@ -143,7 +143,7 @@ public class FileUploadUtils
 
     public static final String getPathFileName(String uploadDir, String fileName) throws IOException
     {
-        int dirLastIndex = RuoYiConfig.getProfile().length() + 1;
+        int dirLastIndex = GydConfig.getProfile().length() + 1;
         String currentDir = StringUtils.substring(uploadDir, dirLastIndex);
         return Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
     }

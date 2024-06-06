@@ -3,7 +3,7 @@ package com.gydblog.common.utils.file;
 /**
  * 媒体类型工具类
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class MimeTypeUtils
 {

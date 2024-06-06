@@ -1,6 +1,6 @@
 package com.gydblog.admin.controller.log;
 
-import com.gydblog.base.web.service.SysPasswordService;
+import com.gydblog.admin.web.service.SysPasswordService;
 import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.annotation.Log;
 import com.gydblog.common.domain.PageResult;

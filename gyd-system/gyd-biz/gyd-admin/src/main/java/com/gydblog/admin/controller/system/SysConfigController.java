@@ -1,11 +1,11 @@
 package com.gydblog.admin.controller.system;
 
+import com.gydblog.base.service.SysConfigService;
 import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.domain.PageResult;
 import com.gydblog.common.domain.R;
 import com.gydblog.common.domain.entity.SysConfigEntity;
 import com.gydblog.common.enums.ResBizTypeEnum;
-import com.gydblog.base.service.SysConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;

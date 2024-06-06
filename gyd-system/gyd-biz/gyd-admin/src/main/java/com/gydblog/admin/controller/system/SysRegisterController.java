@@ -1,13 +1,13 @@
 package com.gydblog.admin.controller.system;
 
+import com.gydblog.base.service.SysConfigService;
 import com.gydblog.common.annotation.Anonymous;
 import com.gydblog.common.domain.R;
 import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.RegisterBody;
 import com.gydblog.common.utils.StringUtils;
-import com.gydblog.base.service.SysConfigService;
-import com.gydblog.base.service.SysUserService;
-import com.gydblog.base.web.service.SysRegisterService;
+import com.gydblog.admin.service.SysUserService;
+import com.gydblog.admin.web.service.SysRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

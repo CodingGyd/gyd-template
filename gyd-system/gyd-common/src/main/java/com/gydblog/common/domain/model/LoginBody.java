@@ -3,7 +3,7 @@ package com.gydblog.common.domain.model;
 /**
  * 用户登录对象
  *
- * @author ruoyi
+ * @author gyd
  */
 public class LoginBody {
     /**

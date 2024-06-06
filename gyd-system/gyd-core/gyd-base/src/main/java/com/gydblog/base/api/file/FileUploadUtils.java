@@ -21,7 +21,7 @@ import java.util.Objects;
 /**
  * 文件上传工具类
  *
- * @author ruoyi
+ * @author gyd
  */
 public class FileUploadUtils {
     private static final Logger log = LoggerFactory.getLogger(FileUploadUtils.class);

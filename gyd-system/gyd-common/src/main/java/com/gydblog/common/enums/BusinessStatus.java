@@ -3,7 +3,7 @@ package com.gydblog.common.enums;
 /**
  * 操作状态
  *
- * @author ruoyi
+ * @author gyd
  */
 public enum BusinessStatus {
     /**

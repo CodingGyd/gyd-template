@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 公告 服务层
  * 
- * @author ruoyi
+ * @author gyd
  */
 public interface ISysNoticeService
 {

@@ -1,6 +1,6 @@
 package com.gydblog.common.utils.file;
 
-import com.gydblog.common.config.RuoYiConfig;
+import com.gydblog.common.config.GydConfig;
 import com.gydblog.common.constant.Constants;
 import com.gydblog.common.utils.StringUtils;
 import org.apache.poi.util.IOUtils;
@@ -17,7 +17,7 @@ import java.util.Arrays;
 /**
  * 图片处理工具类
  *
- * @author ruoyi
+ * @author gyd
  */
 public class ImageUtils
 {
@@ -80,7 +80,7 @@ public class ImageUtils
             else
             {
                 // 本机地址
-                String localPath = RuoYiConfig.getProfile();
+                String localPath = GydConfig.getProfile();
                 String downloadPath = localPath + StringUtils.substringAfter(url, Constants.RESOURCE_PREFIX);
                 in = new FileInputStream(downloadPath);
             }

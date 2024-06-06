@@ -5,7 +5,7 @@ import com.gydblog.common.exception.base.BaseException;
 /**
  * 文件信息异常类
  *
- * @author ruoyi
+ * @author gyd
  */
 public class FileException extends BaseException {
     private static final long serialVersionUID = 1L;

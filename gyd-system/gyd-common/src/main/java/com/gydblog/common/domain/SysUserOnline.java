@@ -3,7 +3,7 @@ package com.gydblog.common.domain;
 /**
  * 当前在线会话
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class SysUserOnline
 {

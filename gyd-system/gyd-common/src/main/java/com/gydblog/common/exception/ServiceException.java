@@ -3,7 +3,7 @@ package com.gydblog.common.exception;
 /**
  * 业务异常
  *
- * @author ruoyi
+ * @author gyd
  */
 public final class ServiceException extends RuntimeException {
     private static final long serialVersionUID = 1L;

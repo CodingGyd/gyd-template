@@ -5,7 +5,7 @@ package com.gydblog.common.utils;
 /**
  * 路由显示信息
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class MetaVo
 {

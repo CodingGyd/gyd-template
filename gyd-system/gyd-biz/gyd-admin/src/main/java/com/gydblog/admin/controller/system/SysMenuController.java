@@ -6,7 +6,7 @@ import com.gydblog.common.domain.R;
 import com.gydblog.common.domain.entity.SysMenu;
 import com.gydblog.common.enums.ResBizTypeEnum;
 import com.gydblog.common.utils.StringUtils;
-import com.gydblog.base.service.SysMenuService;
+import com.gydblog.admin.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;

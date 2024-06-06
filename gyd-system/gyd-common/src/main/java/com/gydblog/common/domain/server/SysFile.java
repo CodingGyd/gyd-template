@@ -3,7 +3,7 @@ package com.gydblog.common.domain.server;
 /**
  * 系统文件相关信息
  * 
- * @author ruoyi
+ * @author gyd
  */
 public class SysFile
 {

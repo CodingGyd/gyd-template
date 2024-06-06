@@ -8,9 +8,9 @@ import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.LoginBody;
 import com.gydblog.common.enums.ResBizTypeEnum;
 import com.gydblog.common.utils.SecurityUtils;
-import com.gydblog.base.service.SysMenuService;
-import com.gydblog.base.web.service.SysLoginService;
-import com.gydblog.base.web.service.SysPermissionService;
+import com.gydblog.admin.service.SysMenuService;
+import com.gydblog.admin.web.service.SysLoginService;
+import com.gydblog.admin.web.service.SysPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
