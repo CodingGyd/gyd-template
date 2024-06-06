@@ -1,6 +1,6 @@
 package com.gydblog.base.web.service;
 
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.LoginUser;
 import com.gydblog.common.enums.UserStatusEnum;
 import com.gydblog.common.exception.ServiceException;
@@ -35,7 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        SysUserEntity user = userService.selectUserByUserName(username);
+        SysUser user = userService.selectUserByUserName(username);
         if (StringUtils.isNull(user)) {
             log.info("登录用户：{} 不存在.", username);
             throw new UserPasswordNotMatchException();
@@ -52,7 +52,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return createLoginUser(user);
     }
 
-    public UserDetails createLoginUser(SysUserEntity user) {
+    public UserDetails createLoginUser(SysUser user) {
         return new LoginUser(user.getUserId(), user,
                 permissionService.getMenuPermission(user), permissionService.getResources(user));
     }

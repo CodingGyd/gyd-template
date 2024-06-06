@@ -9,7 +9,7 @@ import com.gydblog.base.service.SysUserService;
 import com.gydblog.common.constant.CacheConstants;
 import com.gydblog.common.constant.Constants;
 import com.gydblog.common.core.RedisCache;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.LoginUser;
 import com.gydblog.common.exception.ServiceException;
 import com.gydblog.common.utils.MessageUtils;
@@ -78,7 +78,6 @@ public class SysLoginService {
             } else {
                 //异步执行->登录信息
                 AsyncManager.me().execute(AsyncFactory.recordLogininfor(username, null, Constants.LOGIN_FAIL, e.getMessage()));
-                e.printStackTrace();
                 throw new ServiceException(e.getMessage());
             }
         } finally {
@@ -123,7 +122,7 @@ public class SysLoginService {
      * @param userId 用户ID
      */
     public void recordLoginInfo(Long userId) {
-        SysUserEntity sysUser = new SysUserEntity();
+        SysUser sysUser = new SysUser();
         sysUser.setUserId(userId);
         sysUser.setLoginIp(IpUtils.getIpAddr(ServletUtils.getRequest()));
         sysUser.setLoginDate(DateUtil.date());

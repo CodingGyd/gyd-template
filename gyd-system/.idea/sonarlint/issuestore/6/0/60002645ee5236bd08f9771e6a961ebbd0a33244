@@ -1,0 +1,13 @@
+
+t
+java:S2293J"YReplace the type specification in this constructor call with the diamond operator ("<>").(†þ´×þÿÿÿÿ
+p
+java:S2293¿"YReplace the type specification in this constructor call with the diamond operator ("<>").(éœ¬
+i
+java:S3252õ"KUse static access with "org.apache.commons.lang3.StringUtils" for "equals".(ˆ€ØÈ8öæµºþ1
+a
+java:S1155—">Use isEmpty() to check whether the collection is empty or not.(ô§Ùºýÿÿÿÿ8ô¼¶ºþ1
+H
+java:S1905Ã"*Remove this unnecessary cast to "SysDept".(²‚ŒÂ8õ¼¶ºþ1
+a
+java:S1155Ñ">Use isEmpty() to check whether the collection is empty or not.(Ó¦Ý³ýÿÿÿÿ8ö¼¶ºþ1

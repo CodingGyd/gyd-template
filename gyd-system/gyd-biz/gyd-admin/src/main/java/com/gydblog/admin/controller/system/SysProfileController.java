@@ -2,7 +2,7 @@ package com.gydblog.admin.controller.system;
 
 import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.domain.R;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.LoginUser;
 import com.gydblog.common.enums.ResBizTypeEnum;
 import com.gydblog.common.utils.SecurityUtils;
@@ -37,7 +37,7 @@ public class SysProfileController {
     @GetMapping(name = "个人信息管理-查询")
     public R profile() {
         LoginUser loginUser = getLoginUser();
-        SysUserEntity user = loginUser.getUser();
+        SysUser user = loginUser.getUser();
         R ajax = R.ok(user);
         ajax.put("roleGroup", userService.selectUserRoleGroup(loginUser.getUsername()));
         return ajax;
@@ -47,9 +47,9 @@ public class SysProfileController {
      * 修改用户
      */
     @PutMapping(name = "个人信息管理-修改")
-    public R updateProfile(@RequestBody SysUserEntity user) {
+    public R updateProfile(@RequestBody SysUser user) {
         LoginUser loginUser = getLoginUser();
-        SysUserEntity sysUser = loginUser.getUser();
+        SysUser sysUser = loginUser.getUser();
         user.setUserName(sysUser.getUserName());
         if (StringUtils.isNotEmpty(user.getPhonenumber())
                 && !(userService.checkPhoneUnique(user))) {

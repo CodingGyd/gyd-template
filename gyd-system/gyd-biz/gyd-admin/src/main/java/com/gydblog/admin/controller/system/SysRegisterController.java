@@ -2,7 +2,7 @@ package com.gydblog.admin.controller.system;
 
 import com.gydblog.common.annotation.Anonymous;
 import com.gydblog.common.domain.R;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.RegisterBody;
 import com.gydblog.common.utils.StringUtils;
 import com.gydblog.base.service.SysConfigService;
@@ -40,7 +40,7 @@ public class SysRegisterController {
     @Anonymous
     @GetMapping("/userNameUnique")
     public R userNameUnique(String userName) {
-        SysUserEntity userEntity = new SysUserEntity();
+        SysUser userEntity = new SysUser();
         userEntity.setUserName(userName);
         return R.ok(userService.checkUserNameUnique(userEntity));
     }
@@ -48,7 +48,7 @@ public class SysRegisterController {
     @Anonymous
     @GetMapping("/emailUnique")
     public R emailUnique(String email) {
-        SysUserEntity userEntity = new SysUserEntity();
+        SysUser userEntity = new SysUser();
         userEntity.setEmail(email);
         return R.ok(userService.checkEmailUnique(userEntity));
     }

@@ -1,8 +1,8 @@
 package com.gydblog.base.web.service;
 
 import com.gydblog.common.core.RedisCache;
-import com.gydblog.common.domain.entity.SysRoleEntity;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysRole;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.LoginUser;
 import com.gydblog.base.service.SysMenuService;
 import com.gydblog.base.service.SysResourceService;
@@ -42,7 +42,7 @@ public class SysPermissionService {
      * @param user 用户信息
      * @return 角色权限信息
      */
-    public Set<String> getRolePermission(SysUserEntity user) {
+    public Set<String> getRolePermission(SysUser user) {
         Set<String> roles = new HashSet<String>();
         // 管理员拥有所有权限
         if (user.isAdmin()) {
@@ -59,16 +59,16 @@ public class SysPermissionService {
      * @param user 用户信息
      * @return 菜单权限信息
      */
-    public Set<String> getMenuPermission(SysUserEntity user) {
+    public Set<String> getMenuPermission(SysUser user) {
         Set<String> perms = new HashSet<String>();
         // 管理员拥有所有权限
         if (user.isAdmin()) {
             perms.add("*:*:*");
         } else {
-            List<SysRoleEntity> roles = user.getRoles();
+            List<SysRole> roles = user.getRoles();
             if (!roles.isEmpty() && roles.size() > 1) {
                 // 多角色设置permissions属性，以便数据权限匹配权限
-                for (SysRoleEntity role : roles) {
+                for (SysRole role : roles) {
                     Set<String> rolePerms = menuService.selectMenuPermsByRoleId(role.getRoleId());
                     role.setPermissions(rolePerms);
                     perms.addAll(rolePerms);
@@ -103,15 +103,15 @@ public class SysPermissionService {
      * @param user 用户信息
      * @return 资源信息
      */
-    public Set<String> getResources(SysUserEntity user) {
+    public Set<String> getResources(SysUser user) {
         Set<String> res = new HashSet<String>();
         // 超级管理员拥有所有权限
         if (user.isAdmin()) {
             res.add("*:*:*");
         } else {
-            List<SysRoleEntity> roles = user.getRoles();
+            List<SysRole> roles = user.getRoles();
             if (roles != null && !roles.isEmpty()) {
-                for (SysRoleEntity role : roles) {
+                for (SysRole role : roles) {
                     Set<String> code = resourceService.selectResourceCodeByRoleId(role.getRoleId());
                     res.addAll(code);
                 }
@@ -128,9 +128,9 @@ public class SysPermissionService {
      */
     public void resetLoginUserRoleCache(long roleId) {
 //        Collection<String> keys = redisCache.keys(CacheConstants.LOGIN_USER_KEY + "*");
-        SysUserEntity user = new SysUserEntity();
+        SysUser user = new SysUser();
         user.setRoleId(roleId);
-        List<SysUserEntity> sysUserEntities = userService.selectAllocatedList(user);
+        List<SysUser> sysUserEntities = userService.selectAllocatedList(user);
 
         sysUserEntities.forEach(u -> resetUserRoleAuthCache(u.getUserId()));
     }

@@ -4,16 +4,16 @@ import cn.hutool.core.util.ObjectUtil;
 import com.gydblog.common.core.BaseMapperX;
 import com.gydblog.common.core.LambdaQueryWrapperX;
 import com.gydblog.common.domain.PageResult;
-import com.gydblog.common.domain.entity.SysMenuEntity;
+import com.gydblog.common.domain.entity.SysMenu;
 import com.gydblog.common.domain.model.SysRoleAuth;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface SysMenuMapper extends BaseMapperX<SysMenuEntity> {
-    default PageResult<SysMenuEntity> selectPage(SysMenuEntity sysMenuEntity) {
+public interface SysMenuMapper extends BaseMapperX<SysMenu> {
+    default PageResult<SysMenu> selectPage(SysMenu sysMenu) {
 
-        return selectPage(new LambdaQueryWrapperX<SysMenuEntity>());
+        return selectPage(new LambdaQueryWrapperX<SysMenu>());
     }
 
     /**
@@ -22,12 +22,12 @@ public interface SysMenuMapper extends BaseMapperX<SysMenuEntity> {
      * @param menu 菜单信息
      * @return 菜单列表
      */
-    default List<SysMenuEntity> selectMenuList(SysMenuEntity menu) {
+    default List<SysMenu> selectMenuList(SysMenu menu) {
 
-        return selectList(new LambdaQueryWrapperX<SysMenuEntity>()
-                .like(ObjectUtil.isNotNull(menu.getMenuName()), SysMenuEntity::getMenuName, menu.getMenuName())
-                .eq(ObjectUtil.isNotNull(menu.getVisible()), SysMenuEntity::getVisible, menu.getVisible())
-                .eq(ObjectUtil.isNotNull(menu.getStatus()), SysMenuEntity::getStatus, menu.getStatus()));
+        return selectList(new LambdaQueryWrapperX<SysMenu>()
+                .like(ObjectUtil.isNotNull(menu.getMenuName()), SysMenu::getMenuName, menu.getMenuName())
+                .eq(ObjectUtil.isNotNull(menu.getVisible()), SysMenu::getVisible, menu.getVisible())
+                .eq(ObjectUtil.isNotNull(menu.getStatus()), SysMenu::getStatus, menu.getStatus()));
     }
 
     /**
@@ -36,14 +36,14 @@ public interface SysMenuMapper extends BaseMapperX<SysMenuEntity> {
      * @param menu 菜单信息
      * @return 菜单列表
      */
-    List<SysMenuEntity> selectMenuListByUserId(SysMenuEntity menu);
+    List<SysMenu> selectMenuListByUserId(SysMenu menu);
 
     /**
      * 根据用户ID查询菜单
      *
      * @return 菜单列表
      */
-    List<SysMenuEntity> selectMenuTreeAll();
+    List<SysMenu> selectMenuTreeAll();
 
     /**
      * 根据用户ID查询菜单
@@ -51,7 +51,7 @@ public interface SysMenuMapper extends BaseMapperX<SysMenuEntity> {
      * @param userId 用户ID
      * @return 菜单列表
      */
-    List<SysMenuEntity> selectMenuTreeByUserId(Long userId);
+    List<SysMenu> selectMenuTreeByUserId(Long userId);
 
 
     /**
@@ -90,10 +90,10 @@ public interface SysMenuMapper extends BaseMapperX<SysMenuEntity> {
     /**
      * 校验菜单名称是否唯一
      */
-    default SysMenuEntity checkMenuNameUnique(SysMenuEntity menu) {
-        return selectOne(new LambdaQueryWrapperX<SysMenuEntity>()
-                .eq(SysMenuEntity::getMenuName, menu.getMenuName())
-                .eq(SysMenuEntity::getParentId, menu.getParentId())
+    default SysMenu checkMenuNameUnique(SysMenu menu) {
+        return selectOne(new LambdaQueryWrapperX<SysMenu>()
+                .eq(SysMenu::getMenuName, menu.getMenuName())
+                .eq(SysMenu::getParentId, menu.getParentId())
         );
     }
 

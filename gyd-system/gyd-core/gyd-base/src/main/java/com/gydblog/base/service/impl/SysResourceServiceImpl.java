@@ -6,7 +6,7 @@ import com.gydblog.common.domain.PageResult;
 import com.gydblog.common.domain.TreeSelect;
 import com.gydblog.common.domain.entity.SysResourceEntity;
 import com.gydblog.common.domain.entity.SysRoleResourceEntity;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.SysRoleAuth;
 import com.gydblog.base.mapper.SysResourceMapper;
 import com.gydblog.base.mapper.SysRoleMapper;
@@ -83,7 +83,7 @@ public class SysResourceServiceImpl extends ServiceImpl<SysResourceMapper, SysRe
     public List<SysResourceEntity> selectApiResourceList(SysResourceEntity resource, Long userId) {
         List<SysResourceEntity> resourceList = null;
         // 管理员显示所有资源信息
-        if (SysUserEntity.isAdmin(userId)) {
+        if (SysUser.isAdmin(userId)) {
             resourceList = resourceMapper.selectResourceList(resource);
         } else {
             resource.getParams().put("userId", userId);

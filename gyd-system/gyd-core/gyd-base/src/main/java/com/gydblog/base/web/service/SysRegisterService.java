@@ -4,7 +4,7 @@ import com.gydblog.common.constant.CacheConstants;
 import com.gydblog.common.constant.Constants;
 import com.gydblog.common.constant.UserConstants;
 import com.gydblog.common.core.RedisCache;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.RegisterBody;
 import com.gydblog.common.exception.user.CaptchaException;
 import com.gydblog.common.exception.user.CaptchaExpireException;
@@ -43,7 +43,7 @@ public class SysRegisterService {
      */
     public String register(RegisterBody registerBody) {
         String msg = "", username = registerBody.getUsername(), password = registerBody.getPassword();
-        SysUserEntity sysUser = new SysUserEntity();
+        SysUser sysUser = new SysUser();
         sysUser.setUserName(username);
 
         // 验证码开关
@@ -73,7 +73,7 @@ public class SysRegisterService {
             } else {
                 //注册成功
                 //添加 imaotai 角色
-                SysUserEntity userEntity = userService.selectUserByUserName(username);
+                SysUser userEntity = userService.selectUserByUserName(username);
                 Set<String> roleSet = new HashSet<>();
                 roleSet.add("imaotai");
                 userService.insertUserAuth(userEntity.getUserId(), roleSet);

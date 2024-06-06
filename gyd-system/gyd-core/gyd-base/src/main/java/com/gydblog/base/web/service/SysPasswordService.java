@@ -3,7 +3,7 @@ package com.gydblog.base.web.service;
 import com.gydblog.common.constant.CacheConstants;
 import com.gydblog.common.constant.Constants;
 import com.gydblog.common.core.RedisCache;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.exception.user.UserPasswordNotMatchException;
 import com.gydblog.common.exception.user.UserPasswordRetryLimitExceedException;
 import com.gydblog.common.utils.MessageUtils;
@@ -44,7 +44,7 @@ public class SysPasswordService {
         return CacheConstants.PWD_ERR_CNT_KEY + username;
     }
 
-    public void validate(SysUserEntity user) {
+    public void validate(SysUser user) {
         Authentication usernamePasswordAuthenticationToken = AuthenticationContextHolder.getContext();
         String username = usernamePasswordAuthenticationToken.getName();
         String password = usernamePasswordAuthenticationToken.getCredentials().toString();
@@ -72,7 +72,7 @@ public class SysPasswordService {
         }
     }
 
-    public boolean matches(SysUserEntity user, String rawPassword) {
+    public boolean matches(SysUser user, String rawPassword) {
         return SecurityUtils.matchesPassword(rawPassword, user.getPassword());
     }
 

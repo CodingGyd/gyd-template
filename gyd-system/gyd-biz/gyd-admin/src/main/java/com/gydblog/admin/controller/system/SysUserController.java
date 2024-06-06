@@ -4,8 +4,8 @@ import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.annotation.Log;
 import com.gydblog.common.domain.PageResult;
 import com.gydblog.common.domain.R;
-import com.gydblog.common.domain.entity.SysRoleEntity;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysRole;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.enums.ResBizTypeEnum;
 import com.gydblog.common.utils.SecurityUtils;
 import com.gydblog.common.utils.StringUtils;
@@ -42,8 +42,8 @@ public class SysUserController {
      */
     @GetMapping("list")
     @PreAuthorize("@ss.hasPermi('system:user:list')")
-    public R page(SysUserEntity sysUserEntity) {
-        PageResult<SysUserEntity> page = userService.page(sysUserEntity);
+    public R page(SysUser SysUser) {
+        PageResult<SysUser> page = userService.page(SysUser);
         return R.ok().put(page);
     }
 
@@ -54,12 +54,12 @@ public class SysUserController {
     @PreAuthorize("@ss.hasPermi('system:user:query')")
     public R getInfo(@PathVariable(value = "userId", required = false) Long userId) {
         R res = R.ok();
-        List<SysRoleEntity> roles = roleService.selectRoleAll();
-        res.put("roles", SysUserEntity.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
+        List<SysRole> roles = roleService.selectRoleAll();
+        res.put("roles", SysUser.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
         if (StringUtils.isNotNull(userId)) {
-            SysUserEntity sysUser = userService.selectUserById(userId);
+            SysUser sysUser = userService.selectUserById(userId);
             res.put("data", sysUser);
-            res.put("roleIds", sysUser.getRoles().stream().map(SysRoleEntity::getRoleId).collect(Collectors.toList()));
+            res.put("roleIds", sysUser.getRoles().stream().map(SysRole::getRoleId).collect(Collectors.toList()));
         }
 
         return res;
@@ -70,8 +70,8 @@ public class SysUserController {
      */
     @PostMapping
     @PreAuthorize("@ss.hasPermi('system:user:add')")
-    public R add(@Validated @RequestBody SysUserEntity sysUserEntity) {
-        userService.insertUser(sysUserEntity);
+    public R add(@Validated @RequestBody SysUser SysUser) {
+        userService.insertUser(SysUser);
 
         return R.ok();
     }
@@ -81,7 +81,7 @@ public class SysUserController {
      */
     @PutMapping
     @PreAuthorize("@ss.hasPermi('system:user:edit')")
-    public R update(@Validated @RequestBody SysUserEntity user) {
+    public R update(@Validated @RequestBody SysUser user) {
         userService.checkUserAllowed(user);
         if (!(userService.checkUserNameUnique(user))) {
             return R.error("修改用户'" + user.getUserName() + "'失败，登录账号已存在");
@@ -116,10 +116,10 @@ public class SysUserController {
     @GetMapping("/authRole/{userId}")
     public R authRole(@PathVariable("userId") Long userId) {
         R res = R.ok();
-        SysUserEntity user = userService.selectUserById(userId);
-        List<SysRoleEntity> roles = roleService.selectRolesByUserId(userId);
+        SysUser user = userService.selectUserById(userId);
+        List<SysRole> roles = roleService.selectRolesByUserId(userId);
         res.put("user", user);
-        res.put("roles", SysUserEntity.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
+        res.put("roles", SysUser.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
         return res;
     }
 
@@ -129,7 +129,7 @@ public class SysUserController {
     @PreAuthorize("@ss.hasPermi('system:user:edit')")
     @PutMapping("/authRole")
     public R insertAuthRole(Long userId, Long[] roleIds) {
-        if (!SysUserEntity.isAdmin(userId)) {
+        if (!SysUser.isAdmin(userId)) {
             userService.insertUserAuth(userId, roleIds);
             return R.ok();
         } else {
@@ -144,7 +144,7 @@ public class SysUserController {
      */
     @PreAuthorize("@ss.hasPermi('system:user:resetPwd')")
     @PutMapping("/resetPwd")
-    public R resetPwd(@RequestBody SysUserEntity user) {
+    public R resetPwd(@RequestBody SysUser user) {
 
         userService.checkUserAllowed(user);
         user.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
@@ -156,7 +156,7 @@ public class SysUserController {
      */
     @PreAuthorize("@ss.hasPermi('system:user:edit')")
     @PutMapping("/changeStatus")
-    public R changeStatus(@RequestBody SysUserEntity user) {
+    public R changeStatus(@RequestBody SysUser user) {
 
         userService.checkUserAllowed(user);
         userService.updateUserStatus(user);

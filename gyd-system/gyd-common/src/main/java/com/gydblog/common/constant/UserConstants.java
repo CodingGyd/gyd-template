@@ -86,8 +86,14 @@ public class UserConstants {
     /**
      * 校验返回结果码
      */
-    public final static String UNIQUE = "0";
-    public final static String NOT_UNIQUE = "1";
+    public final static boolean UNIQUE = true;
+    public final static boolean NOT_UNIQUE = false;
+
+    /** 部门正常状态 */
+    public static final String DEPT_NORMAL = "0";
+
+    /** 部门停用状态 */
+    public static final String DEPT_DISABLE = "1";
 
     /**
      * 用户名长度限制

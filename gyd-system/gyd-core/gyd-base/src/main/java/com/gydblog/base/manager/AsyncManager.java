@@ -1,6 +1,6 @@
 package com.gydblog.base.manager;
 
-import com.gydblog.common.utils.SpringUtils;
+import com.gydblog.common.utils.spring.SpringUtils;
 import com.gydblog.common.utils.Threads;
 
 import java.util.TimerTask;

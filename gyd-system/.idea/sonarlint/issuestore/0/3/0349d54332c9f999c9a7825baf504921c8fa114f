@@ -1,0 +1,9 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(½Û¼š
+q
+java:S3252y"TUse static access with "org.apache.commons.lang3.StringUtils" for "substringBefore".(µ«££8ëÌè¯ş1
+s
+java:S3252z"QUse static access with "org.apache.commons.lang3.StringUtils" for "countMatches".(·»Äúÿÿÿÿ8ëÌè¯ş1
+l
+java:S3252"JUse static access with "org.apache.commons.lang3.StringUtils" for "split".(·†íşÿÿÿÿ8ìÌè¯ş1

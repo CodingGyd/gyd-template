@@ -1,6 +1,7 @@
 package com.gydblog.common.utils.ip;
 
 
+import com.gydblog.common.utils.ServletUtils;
 import com.gydblog.common.utils.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,15 @@ import java.net.UnknownHostException;
  */
 public class IpUtils
 {
+    /**
+     * 获取客户端IP
+     *
+     * @return IP地址
+     */
+    public static String getIpAddr()
+    {
+        return getIpAddr(ServletUtils.getRequest());
+    }
     /**
      * 获取客户端IP
      * 

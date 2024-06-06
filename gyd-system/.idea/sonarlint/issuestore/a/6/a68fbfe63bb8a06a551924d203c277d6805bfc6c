@@ -1,0 +1,21 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Şı£˜üÿÿÿÿ
+A
+java:S1168+"+Return an empty collection instead of null.(¥¹ï
+m
+java:S3776L"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(•­ªûÿÿÿÿ
+e
+java:S3252Q"PUse static access with "org.apache.commons.lang3.StringUtils" for "containsAny".(³˜ìM
+c
+java:S3252b"MUse static access with "org.apache.commons.lang3.StringUtils" for "stripEnd".(´´
+o
+java:S3776m"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(“·±Ò8ÓÄ¿”ş1
+r
+java:S3252q"PUse static access with "org.apache.commons.lang3.StringUtils" for "containsAny".(ÆŒ¤³ùÿÿÿÿ8ÕÄ¿”ş1
+k
+java:S3252"MUse static access with "org.apache.commons.lang3.StringUtils" for "stripEnd".(´´8ÖÄ¿”ş1
+h
+java:S3252«"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(„›ÎÕ8Üı¿”ş1
+p
+java:S3252±"MUse static access with "org.apache.commons.lang3.StringUtils" for "stripEnd".(µæ¸×øÿÿÿÿ8Üı¿”ş1

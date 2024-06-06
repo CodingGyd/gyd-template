@@ -2,7 +2,7 @@ package com.gydblog.base.web.service;
 
 import cn.hutool.core.util.StrUtil;
 import com.gydblog.common.annotation.ApiResource;
-import com.gydblog.common.domain.entity.SysRoleEntity;
+import com.gydblog.common.domain.entity.SysRole;
 import com.gydblog.common.domain.model.LoginUser;
 import com.gydblog.common.utils.SecurityUtils;
 import com.gydblog.common.utils.ServletUtils;
@@ -185,7 +185,7 @@ public class PermissionService {
         if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getUser().getRoles())) {
             return false;
         }
-        for (SysRoleEntity sysRole : loginUser.getUser().getRoles()) {
+        for (SysRole sysRole : loginUser.getUser().getRoles()) {
             String roleKey = sysRole.getRoleKey();
             if (SUPER_ADMIN.equals(roleKey) || roleKey.equals(StringUtils.trim(role))) {
                 return true;

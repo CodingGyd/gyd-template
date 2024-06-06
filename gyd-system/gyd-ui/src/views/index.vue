@@ -4,7 +4,10 @@
       本项目中所有内容只供学习和研究使用，不得将本项目中任何内容用于违反国家/地区/组织等的法律法规或相关规定的其他用途。
     </p>
     <p>
-      本项目基于开源campus框架开发。
+      此项目参考了一些开源项目的解决方案，在此感谢他们的开源
+      Campus：https://github.com/oddfar/campus
+      Vue后台管理模板：https://github.com/PanJiaChen/vue-element-admin
+      RuoYi：https://gitee.com/y_project/RuoYi
     </p>
     <p></p>
     <p>本项目免费，无任何盈利</p>

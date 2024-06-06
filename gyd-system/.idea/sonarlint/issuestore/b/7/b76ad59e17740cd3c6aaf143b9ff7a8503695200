@@ -1,0 +1,64 @@
+
+o
+java:S2293k"YReplace the type specification in this constructor call with the diamond operator ("<>").(İóˆ·
+u
+java:S2293Ğ"YReplace the type specification in this constructor call with the diamond operator ("<>").(‹•Šûÿÿÿÿ
+„
+java:S1319Í"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(å¶š¶
+
+java:S1488Ã"cImmediately return this expression instead of assigning it to the temporary variable "basePackage".(ëìÓóıÿÿÿÿ
+Z
+java:S2583v"DChange this condition so that it does not always evaluate to "false"(¼Ì ÿ
+v
+java:S1149´"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ô«Ã×
+P
+java:S1118":Add a private constructor to hide the implicit public one.(‹ûÆ©
+V	java:S125""<This block of commented-out lines of code should be removed.(£„›‹üÿÿÿÿ
+e
+java:S3252-"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "lowerFirst".(èøÍá
+k
+java:S3252Y"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Ùö„ÿÿÿÿÿ
+j
+java:S3252^"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "upperFirst".(åßù¥úÿÿÿÿ
+j
+java:S3252a"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "lowerFirst".(µåş§ûÿÿÿÿ
+B
+java:S1075"&Remove this hard-coded path-delimiter.(ş•ì¥øÿÿÿÿ
+h
+java:S3252"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "replace".(ş•ì¥øÿÿÿÿ
+<
+java:S1075"&Remove this hard-coded path-delimiter.(š²õG
+b
+java:S3252’"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(Ø©¿ø
+b
+java:S3252“"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(Ë©Ê‡
+g
+java:S3252–"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(É‚Ü»şÿÿÿÿ
+b
+java:S3252˜"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(êÙ«õ
+g
+java:S3252š"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(±Õ˜åùÿÿÿÿ
+a
+java:S3252œ"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(…«™[
+b
+java:S3252"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(ÿ£½
+g
+java:S3252 "KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(Õ´ãşÿÿÿÿ
+g
+java:S3252¢"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(üë„Àüÿÿÿÿ
+g
+java:S3252¤"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(üë„Àüÿÿÿÿ
+g
+java:S3252¦"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(ı¿«ìøÿÿÿÿ
+d
+java:S3252Ã"HUse static access with "cn.hutool.core.text.CharSequenceUtil" for "sub".(ëìÓóıÿÿÿÿ
+g
+java:S3252æ"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "format".(¢Ê©Èÿÿÿÿÿ
+l
+java:S3252ò"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(§áê—ıÿÿÿÿ
+g
+java:S3252ÿ"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(å¹å
+l
+java:S3252Œ"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(ÈÇ€¯øÿÿÿÿ
+g
+java:S3252"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(êŠ×¤şÿÿÿÿ

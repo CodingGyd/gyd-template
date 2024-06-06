@@ -1,0 +1,25 @@
+
+a	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(ŒÚ„§ÿÿÿÿÿ
+`	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(Ãú•øÿÿÿÿ
+t
+java:S2293p"YReplace the type specification in this constructor call with the diamond operator ("<>").(º´Õ¬ÿÿÿÿÿ
+2
+java:S1643_"Use a StringBuilder instead.(Õœìò
+t
+java:S1488>"^Immediately return this expression instead of assigning it to the temporary variable "result".(‹ù‹Ş
+b
+java:S2095s"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(´ÓñÊ
+^
+java:S2095r"HUse try-with-resources or close this "FileReader" in a "finally" clause.(§‡ø
+-
+java:S2176"Rename this class.(Ä·Š’şÿÿÿÿ
+u
+java:S1149u"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(å½ƒ‹ıÿÿÿÿ
+m
+java:S37766"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(³Ğ¯µÿÿÿÿÿ
+>	java:S108w")Either remove or fill this block of code.(×ê¶
+W	java:S125"<This block of commented-out lines of code should be removed.(×œŞûûÿÿÿÿ
+T	java:S106–"9Replace this use of System.out or System.err by a logger.(•Âí¿ùÿÿÿÿ
+O	java:S106—"9Replace this use of System.out or System.err by a logger.(”‘³â

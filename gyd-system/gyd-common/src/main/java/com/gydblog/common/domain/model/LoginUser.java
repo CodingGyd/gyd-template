@@ -1,7 +1,7 @@
 package com.gydblog.common.domain.model;
 
 import com.alibaba.fastjson2.annotation.JSONField;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -42,7 +42,30 @@ public class LoginUser implements UserDetails {
      */
     private String ipaddr;
 
+    /**
+     * 登录地点
+     */
+    private String loginLocation;
 
+    /**
+     * 浏览器类型
+     */
+    private String browser;
+
+    /**
+     * 操作系统
+     */
+    private String os;
+
+    /**
+     * 登录时间
+     */
+    private Long loginTime;
+
+    /**
+     * 部门ID
+     */
+    private Long deptId;
     /**
      * 权限列表
      */
@@ -56,9 +79,9 @@ public class LoginUser implements UserDetails {
     /**
      * 用户信息
      */
-    private SysUserEntity user;
+    private SysUser user;
 
-    public LoginUser(Long userId, SysUserEntity user, Set<String> permissions, Set<String> resources) {
+    public LoginUser(Long userId, SysUser user, Set<String> permissions, Set<String> resources) {
         this.userId = userId;
         this.user = user;
         this.permissions = permissions;

@@ -1,0 +1,7 @@
+
+x
+java:S14888"bImmediately return this expression instead of assigning it to the temporary variable "pageResult".(È¥¯
+j
+java:S3252"OUse static access with "com.github.pagehelper.page.PageMethod" for "startPage".(¾Ï©Æüÿÿÿÿ
+j
+java:S3252."OUse static access with "com.github.pagehelper.page.PageMethod" for "clearPage".(´İÂóùÿÿÿÿ

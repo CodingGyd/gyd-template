@@ -1,0 +1,98 @@
+
+d
+java:S1192\"IDefine a constant instead of duplicating this literal "textarea" 3 times.(ïÚæÏıÿÿÿÿ
+c
+java:S1192B"HDefine a constant instead of duplicating this literal "String" 12 times.(Øğ¿ùÿÿÿÿ
+e
+java:S1192®"IDefine a constant instead of duplicating this literal "datetime" 6 times.(Ù¹½ªÿÿÿÿÿ
+a
+java:S11927"FDefine a constant instead of duplicating this literal "input" 9 times.(ë…Åóşÿÿÿÿ
+g
+java:S1192A"LDefine a constant instead of duplicating this literal "varchar(60)" 4 times.(Š°È—ùÿÿÿÿ
+a
+java:S1192¶"JDefine a constant instead of duplicating this literal "comment '" 3 times.(­í’
+i
+java:S1192°"MDefine a constant instead of duplicating this literal "alter table " 4 times.(ßÓàÏúÿÿÿÿ
+b
+java:S1192¶"KDefine a constant instead of duplicating this literal " default '" 3 times.(­í’
+]
+java:S1192@"GDefine a constant instead of duplicating this literal "label" 10 times.(ËÊ£»
+g
+java:S1192T"LDefine a constant instead of duplicating this literal "varchar(30)" 3 times.(æ±ğ¬ÿÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(•šÍöşÿÿÿÿ
+e
+java:S3252"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "upperFirst".(ùÛÊ“
+Y
+java:S1155,">Use isEmpty() to check whether the collection is empty or not.(ï—È‡ùÿÿÿÿ
+7	java:S131<""Add a default case to this switch.(ê®Š¿
+j
+java:S3252?"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(—¿ò‹
+k
+java:S3252C"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Üøöùÿÿÿÿ
+q
+java:S3252D"VUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithIgnoreCase".(´²•§øÿÿÿÿ
+j
+java:S3252R"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(òŠıÉ
+f
+java:S3252V"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Âå‘ê
+j
+java:S3252^"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(àåÍÿ
+f
+java:S3252b"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(µğ—Ô
+o
+java:S3252k"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(ş¼Œùûÿÿÿÿ
+f
+java:S3252o"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Ÿ¯Ø
+o
+java:S3252y"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(‹‘…şøÿÿÿÿ
+k
+java:S3252}"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Ê”åÔıÿÿÿÿ
+p
+java:S3252‡"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".( ï¸Êùÿÿÿÿ
+l
+java:S3252‹"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(°úôÌıÿÿÿÿ
+p
+java:S3252•"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(«ğõ×ùÿÿÿÿ
+f
+java:S3252™"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(–Õf
+p
+java:S3252£"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(Ñ’½ÿÿÿÿÿ
+g
+java:S3252§"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(õÈùş
+k
+java:S3252±"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(¹ü
+l
+java:S3252µ"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(¼Ó§‰ûÿÿÿÿ
+p
+java:S3252¿"TUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toUnderlineCase".(ÒëÑşÿÿÿÿ
+g
+java:S3252Ã"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(ñÔ¹ƒ
+U
+java:S1155“">Use isEmpty() to check whether the collection is empty or not.(ÎÊì
+f
+java:S3252"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(ÆœÆö
+f
+java:S3252¤"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(óı†‡
+k
+java:S3252¥"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(ÿº»ıÿÿÿÿ
+i
+java:S3776­"RRefactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed.(¡İå
+k
+java:S3252¯"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(Á‡Â¼øÿÿÿÿ
+U
+java:S1155²">Use isEmpty() to check whether the collection is empty or not.(ÎÊì
+f
+java:S3252¶"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(­í’
+f
+java:S3252¶"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(­í’
+f
+java:S3252º"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(¡İòë
+f
+java:S3252º"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(¡İòë
+f
+java:S3252½"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(­í’
+f
+java:S3252½"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(­í’
+â
+java:S6541("ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 226 to 64, Complexity from 16 to 14, Nesting Level from 4 to 2, Number of Variables from 23 to 6.(ÈœÅÀüÿÿÿÿ

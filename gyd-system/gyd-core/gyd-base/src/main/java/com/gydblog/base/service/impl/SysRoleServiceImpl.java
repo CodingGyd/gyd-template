@@ -2,7 +2,7 @@ package com.gydblog.base.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gydblog.common.domain.PageResult;
-import com.gydblog.common.domain.entity.SysRoleEntity;
+import com.gydblog.common.domain.entity.SysRole;
 import com.gydblog.common.domain.entity.SysRoleMenuEntity;
 import com.gydblog.common.domain.entity.SysUserRoleEntity;
 import com.gydblog.common.domain.model.SysRoleAuth;
@@ -42,12 +42,12 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
     ApplicationContext applicationContext;
 
     @Override
-    public PageResult<SysRoleEntity> page(SysRoleEntity sysRoleEntity) {
-        return roleMapper.selectPage(sysRoleEntity);
+    public PageResult<SysRole> page(SysRole SysRole) {
+        return roleMapper.selectPage(SysRole);
     }
 
     @Override
-    public List<SysRoleEntity> selectRoleList(SysRoleEntity role) {
+    public List<SysRole> selectRoleList(SysRole role) {
         return roleMapper.selectRoleList(role);
     }
 
@@ -59,9 +59,9 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
      */
     @Override
     public Set<String> selectRolePermissionByUserId(Long userId) {
-        List<SysRoleEntity> perms = roleMapper.selectRolePermissionByUserId(userId);
+        List<SysRole> perms = roleMapper.selectRolePermissionByUserId(userId);
         Set<String> permsSet = new HashSet<>();
-        for (SysRoleEntity perm : perms) {
+        for (SysRole perm : perms) {
             if (StringUtils.isNotNull(perm)) {
                 permsSet.addAll(Arrays.asList(perm.getRoleKey().trim().split(",")));
             }
@@ -77,22 +77,22 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
      * @return 角色对象信息
      */
     @Override
-    public SysRoleEntity selectRoleById(Long roleId) {
+    public SysRole selectRoleById(Long roleId) {
         return roleMapper.selectRoleById(roleId);
     }
 
     @Override
-    public List<SysRoleEntity> selectRoleAll() {
-        return this.selectRoleList(new SysRoleEntity());
-//        return SpringUtils.getAopProxy(this).selectRoleList(new SysRoleEntity());
+    public List<SysRole> selectRoleAll() {
+        return this.selectRoleList(new SysRole());
+//        return SpringUtils.getAopProxy(this).selectRoleList(new SysRole());
     }
 
     @Override
-    public List<SysRoleEntity> selectRolesByUserId(Long userId) {
-        List<SysRoleEntity> userRoles = roleMapper.selectRolePermissionByUserId(userId);
-        List<SysRoleEntity> roles = selectRoleAll();
-        for (SysRoleEntity role : roles) {
-            for (SysRoleEntity userRole : userRoles) {
+    public List<SysRole> selectRolesByUserId(Long userId) {
+        List<SysRole> userRoles = roleMapper.selectRolePermissionByUserId(userId);
+        List<SysRole> roles = selectRoleAll();
+        for (SysRole role : roles) {
+            for (SysRole userRole : userRoles) {
                 if (role.getRoleId().longValue() == userRole.getRoleId().longValue()) {
                     role.setFlag(true);
                     break;
@@ -105,14 +105,14 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
 
     @Override
     @Transactional
-    public int insertRole(SysRoleEntity role) {
+    public int insertRole(SysRole role) {
         // 新增角色信息
         roleMapper.insert(role);
         return insertRoleMenu(role);
     }
 
     @Override
-    public int updateRole(SysRoleEntity role) {
+    public int updateRole(SysRole role) {
         // 修改角色信息
         roleMapper.updateById(role);
         // 删除角色与菜单关联
@@ -122,7 +122,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
     }
 
     @Override
-    public int updateRoleStatus(SysRoleEntity role) {
+    public int updateRoleStatus(SysRole role) {
         return roleMapper.updateById(role);
     }
 
@@ -130,8 +130,8 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
     @Transactional
     public int deleteRoleByIds(Long[] roleIds) {
         for (Long roleId : roleIds) {
-            checkRoleAllowed(new SysRoleEntity(roleId));
-            SysRoleEntity role = selectRoleById(roleId);
+            checkRoleAllowed(new SysRole(roleId));
+            SysRole role = selectRoleById(roleId);
             if (countUserRoleByRoleId(roleId) > 0) {
                 throw new ServiceException(String.format("%1$s已分配,不能删除", role.getRoleName()));
             }
@@ -172,9 +172,9 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
     }
 
     @Override
-    public boolean checkRoleNameUnique(SysRoleEntity role) {
+    public boolean checkRoleNameUnique(SysRole role) {
         Long roleId = StringUtils.isNull(role.getRoleId()) ? -1L : role.getRoleId();
-        SysRoleEntity info = roleMapper.checkRoleNameUnique(role.getRoleName());
+        SysRole info = roleMapper.checkRoleNameUnique(role.getRoleName());
         if (StringUtils.isNotNull(info) && info.getRoleId().longValue() != roleId.longValue()) {
             return false;
         }
@@ -182,9 +182,9 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
     }
 
     @Override
-    public boolean checkRoleKeyUnique(SysRoleEntity role) {
+    public boolean checkRoleKeyUnique(SysRole role) {
         Long roleId = StringUtils.isNull(role.getRoleId()) ? -1L : role.getRoleId();
-        SysRoleEntity info = roleMapper.checkRoleKeyUnique(role.getRoleKey());
+        SysRole info = roleMapper.checkRoleKeyUnique(role.getRoleKey());
         if (StringUtils.isNotNull(info) && info.getRoleId().longValue() != roleId.longValue()) {
             return false;
         }
@@ -192,7 +192,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
     }
 
     @Override
-    public void checkRoleAllowed(SysRoleEntity role) {
+    public void checkRoleAllowed(SysRole role) {
         if (StringUtils.isNotNull(role.getRoleId()) && role.isAdmin()) {
             throw new ServiceException("不允许操作超级管理员角色");
         }
@@ -213,7 +213,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRo
      *
      * @param role 角色对象
      */
-    public int insertRoleMenu(SysRoleEntity role) {
+    public int insertRoleMenu(SysRole role) {
         int rows = 1;
         // 新增用户与角色管理
         List<SysRoleMenuEntity> list = new ArrayList<SysRoleMenuEntity>();

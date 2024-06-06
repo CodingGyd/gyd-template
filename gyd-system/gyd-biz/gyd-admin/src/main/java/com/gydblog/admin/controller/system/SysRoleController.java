@@ -4,8 +4,8 @@ import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.core.page.PageUtils;
 import com.gydblog.common.domain.PageResult;
 import com.gydblog.common.domain.R;
-import com.gydblog.common.domain.entity.SysRoleEntity;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysRole;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.entity.SysUserRoleEntity;
 import com.gydblog.common.domain.model.LoginUser;
 import com.gydblog.common.enums.ResBizTypeEnum;
@@ -39,8 +39,8 @@ public class SysRoleController {
 
     @PreAuthorize("@ss.hasPermi('system:role:list')")
     @GetMapping("/list")
-    public R list(SysRoleEntity role) {
-        PageResult<SysRoleEntity> list = roleService.page(role);
+    public R list(SysRole role) {
+        PageResult<SysRole> list = roleService.page(role);
         return R.ok().put(list);
     }
 
@@ -58,7 +58,7 @@ public class SysRoleController {
      */
     @PreAuthorize("@ss.hasPermi('system:role:add')")
     @PostMapping
-    public R add(@Validated @RequestBody SysRoleEntity role) {
+    public R add(@Validated @RequestBody SysRole role) {
         if (!roleService.checkRoleNameUnique(role)) {
             return R.error("新增角色'" + role.getRoleName() + "'失败，角色名称已存在");
         } else if (!roleService.checkRoleKeyUnique(role)) {
@@ -73,7 +73,7 @@ public class SysRoleController {
      */
     @PreAuthorize("@ss.hasPermi('system:role:edit')")
     @PutMapping
-    public R edit(@Validated @RequestBody SysRoleEntity role) {
+    public R edit(@Validated @RequestBody SysRole role) {
         roleService.checkRoleAllowed(role);
         if (!roleService.checkRoleNameUnique(role)) {
             return R.error("修改角色'" + role.getRoleName() + "'失败，角色名称已存在");
@@ -100,7 +100,7 @@ public class SysRoleController {
      */
     @PreAuthorize("@ss.hasPermi('system:role:edit')")
     @PutMapping("/changeStatus")
-    public R changeStatus(@RequestBody SysRoleEntity role) {
+    public R changeStatus(@RequestBody SysRole role) {
         roleService.checkRoleAllowed(role);
         roleService.updateRoleStatus(role);
         //更新redis缓存权限数据
@@ -127,9 +127,9 @@ public class SysRoleController {
      */
     @PreAuthorize("@ss.hasPermi('system:role:list')")
     @GetMapping("/authUser/allocatedList")
-    public R allocatedList(SysUserEntity user) {
+    public R allocatedList(SysUser user) {
         PageUtils.startPage();
-        List<SysUserEntity> list = userService.selectAllocatedList(user);
+        List<SysUser> list = userService.selectAllocatedList(user);
         return R.ok().put(PageUtils.getPageResult(list));
     }
 
@@ -138,9 +138,9 @@ public class SysRoleController {
      */
     @PreAuthorize("@ss.hasPermi('system:role:list')")
     @GetMapping("/authUser/unallocatedList")
-    public R unallocatedList(SysUserEntity user) {
+    public R unallocatedList(SysUser user) {
         PageUtils.startPage();
-        List<SysUserEntity> list = userService.selectUnallocatedList(user);
+        List<SysUser> list = userService.selectUnallocatedList(user);
         return R.ok().put(PageUtils.getPageResult(list));
     }
 

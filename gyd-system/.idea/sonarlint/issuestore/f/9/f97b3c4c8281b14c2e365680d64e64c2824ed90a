@@ -1,11 +1,4 @@
 
-y
-java:S14888"^Immediately return this expression instead of assigning it to the temporary variable "result".(ô§­éûÿÿÿÿ
-L
-java:S2696"6Make the enclosing method "static" or remove this set.(²öÁ³
-Q
-java:S2696!"6Make the enclosing method "static" or remove this set.(ª—ÿêÿÿÿÿÿ
-D
-java:S19058")Remove this unnecessary cast to "Object".(ô§­éûÿÿÿÿ
-I
-java:S1172l".Remove this unused method parameter "invoker".(¨‘Ü„üÿÿÿÿ
+7
+java:S1220""Move this file to a named package.8ÖÎÀ°þ1
+]	java:S125"<This block of commented-out lines of code should be removed.(¨íÍ°úÿÿÿÿ8×ÎÀ°þ1

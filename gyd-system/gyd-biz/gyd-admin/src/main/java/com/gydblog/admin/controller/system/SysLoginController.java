@@ -3,8 +3,8 @@ package com.gydblog.admin.controller.system;
 import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.constant.Constants;
 import com.gydblog.common.domain.R;
-import com.gydblog.common.domain.entity.SysMenuEntity;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysMenu;
+import com.gydblog.common.domain.entity.SysUser;
 import com.gydblog.common.domain.model.LoginBody;
 import com.gydblog.common.enums.ResBizTypeEnum;
 import com.gydblog.common.utils.SecurityUtils;
@@ -53,7 +53,7 @@ public class SysLoginController {
      */
     @GetMapping(value = "getInfo", name = "获取用户信息")
     public R getInfo() {
-        SysUserEntity user = SecurityUtils.getLoginUser().getUser();
+        SysUser user = SecurityUtils.getLoginUser().getUser();
         // 角色集合
         Set<String> roles = permissionService.getRolePermission(user);
         // 权限集合
@@ -73,7 +73,7 @@ public class SysLoginController {
     @GetMapping(value = "getRouters", name = "获取路由信息")
     public R getRouters() {
         Long userId = SecurityUtils.getUserId();
-        List<SysMenuEntity> menus = menuService.selectMenuTreeByUserId(userId);
+        List<SysMenu> menus = menuService.selectMenuTreeByUserId(userId);
         return R.ok(menuService.buildMenus(menus));
     }
 

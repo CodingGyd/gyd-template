@@ -3,20 +3,20 @@ package com.gydblog.base.mapper;
 import com.gydblog.common.core.BaseMapperX;
 import com.gydblog.common.core.LambdaQueryWrapperX;
 import com.gydblog.common.domain.PageResult;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
+public interface SysUserMapper extends BaseMapperX<SysUser> {
 
-    default PageResult<SysUserEntity> selectPage(SysUserEntity user) {
+    default PageResult<SysUser> selectPage(SysUser user) {
 
-        return selectPage(new LambdaQueryWrapperX<SysUserEntity>()
-                .likeIfPresent(SysUserEntity::getUserName, user.getUserName())
-                .likeIfPresent(SysUserEntity::getPhonenumber, user.getPhonenumber())
-                .eqIfPresent(SysUserEntity::getStatus, user.getStatus())
-                .betweenIfPresent(SysUserEntity::getCreateTime, user.getParams())
+        return selectPage(new LambdaQueryWrapperX<SysUser>()
+                .likeIfPresent(SysUser::getUserName, user.getUserName())
+                .likeIfPresent(SysUser::getPhonenumber, user.getPhonenumber())
+                .eqIfPresent(SysUser::getStatus, user.getStatus())
+                .betweenIfPresent(SysUser::getCreateTime, user.getParams())
         );
     }
 
@@ -27,7 +27,7 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param userName
      * @return
      */
-    SysUserEntity selectUserByUserName(String userName);
+    SysUser selectUserByUserName(String userName);
 
     /**
      * 通过用户ID查询用户
@@ -35,7 +35,7 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param userId 用户ID
      * @return 用户对象信息
      */
-    SysUserEntity selectUserById(Long userId);
+    SysUser selectUserById(Long userId);
 
 
     /**
@@ -44,7 +44,7 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    List<SysUserEntity> selectAllocatedList(SysUserEntity user);
+    List<SysUser> selectAllocatedList(SysUser user);
 
     /**
      * 根据条件分页查询未分配用户角色列表
@@ -52,7 +52,7 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    List<SysUserEntity> selectUnallocatedList(SysUserEntity user);
+    List<SysUser> selectUnallocatedList(SysUser user);
 
 
     /**
@@ -70,9 +70,9 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param email 用户邮箱
      * @return 结果
      */
-    default SysUserEntity checkEmailUnique(String email) {
+    default SysUser checkEmailUnique(String email) {
 
-        return selectOne(new LambdaQueryWrapperX<SysUserEntity>().eq(SysUserEntity::getEmail, email));
+        return selectOne(new LambdaQueryWrapperX<SysUser>().eq(SysUser::getEmail, email));
     }
 
     /**
@@ -81,8 +81,8 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param phonenumber 手机号码
      * @return 结果
      */
-    default SysUserEntity checkPhoneUnique(String phonenumber) {
-        return selectOne(new LambdaQueryWrapperX<SysUserEntity>().eq(SysUserEntity::getPhonenumber, phonenumber));
+    default SysUser checkPhoneUnique(String phonenumber) {
+        return selectOne(new LambdaQueryWrapperX<SysUser>().eq(SysUser::getPhonenumber, phonenumber));
     }
 
     /**
@@ -101,8 +101,8 @@ public interface SysUserMapper extends BaseMapperX<SysUserEntity> {
      * @param userName 用户名称
      * @return 结果
      */
-    default SysUserEntity checkUserNameUnique(String userName) {
-        return selectOne(new LambdaQueryWrapperX<SysUserEntity>().eq(SysUserEntity::getUserName, userName));
+    default SysUser checkUserNameUnique(String userName) {
+        return selectOne(new LambdaQueryWrapperX<SysUser>().eq(SysUser::getUserName, userName));
     }
 
 

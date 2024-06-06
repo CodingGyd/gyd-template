@@ -3,7 +3,7 @@ package com.gydblog.admin.controller.system;
 import com.gydblog.common.annotation.ApiResource;
 import com.gydblog.common.constant.UserConstants;
 import com.gydblog.common.domain.R;
-import com.gydblog.common.domain.entity.SysMenuEntity;
+import com.gydblog.common.domain.entity.SysMenu;
 import com.gydblog.common.enums.ResBizTypeEnum;
 import com.gydblog.common.utils.StringUtils;
 import com.gydblog.base.service.SysMenuService;
@@ -29,8 +29,8 @@ public class SysMenuController {
      */
     @PreAuthorize("@ss.hasPermi('system:menu:list')")
     @GetMapping(value = "/list", name = "菜单管理-分页")
-    public R list(SysMenuEntity menu) {
-        List<SysMenuEntity> menus = menuService.selectMenuList(menu, getUserId());
+    public R list(SysMenu menu) {
+        List<SysMenu> menus = menuService.selectMenuList(menu, getUserId());
         return R.ok(menus);
     }
 
@@ -47,8 +47,8 @@ public class SysMenuController {
      * 获取菜单下拉树列表
      */
     @GetMapping(value = "/treeselect", name = "菜单管理-获取菜单下拉树列表")
-    public R treeSelect(SysMenuEntity menu) {
-        List<SysMenuEntity> menus = menuService.selectMenuList(menu, getUserId());
+    public R treeSelect(SysMenu menu) {
+        List<SysMenu> menus = menuService.selectMenuList(menu, getUserId());
         return R.ok(menuService.buildMenuTreeSelect(menus));
     }
 
@@ -57,7 +57,7 @@ public class SysMenuController {
      */
     @GetMapping(value = "/roleMenuTreeselect/{roleId}", name = "菜单管理-加载对应角色菜单列表树")
     public R roleMenuTreeselect(@PathVariable("roleId") Long roleId) {
-        List<SysMenuEntity> menus = menuService.selectMenuList(getUserId());
+        List<SysMenu> menus = menuService.selectMenuList(getUserId());
         R ajax = R.ok();
         ajax.put("checkedKeys", menuService.selectMenuListByRoleId(roleId));
         ajax.put("menus", menuService.buildMenuTreeSelect(menus));
@@ -69,7 +69,7 @@ public class SysMenuController {
      */
     @PreAuthorize("@ss.hasPermi('system:menu:add')")
     @PostMapping(name = "菜单管理-新增")
-    public R add(@Validated @RequestBody SysMenuEntity menu) {
+    public R add(@Validated @RequestBody SysMenu menu) {
         if (!menuService.checkMenuNameUnique(menu)) {
             return R.error("新增菜单'" + menu.getMenuName() + "'失败，菜单名称已存在");
         } else if (UserConstants.YES_FRAME.equals(menu.getIsFrame()) && !StringUtils.ishttp(menu.getPath())) {
@@ -83,7 +83,7 @@ public class SysMenuController {
      */
     @PreAuthorize("@ss.hasPermi('system:menu:edit')")
     @PutMapping(name = "菜单管理-修改")
-    public R edit(@Validated @RequestBody SysMenuEntity menu) {
+    public R edit(@Validated @RequestBody SysMenu menu) {
         if (!menuService.checkMenuNameUnique(menu)) {
             return R.error("修改菜单'" + menu.getMenuName() + "'失败，菜单名称已存在");
         } else if (UserConstants.YES_FRAME.equals(menu.getIsFrame()) && !StringUtils.ishttp(menu.getPath())) {

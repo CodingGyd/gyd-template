@@ -15,7 +15,7 @@
         <result property="functionAuthor" column="function_author"/>
         <result property="cols" column="cols"/>
         <result property="options" column="options"/>
-        <result property="createBy" column="create_by"/>
+        <result property="createUser" column="create_user"/>
         <result property="createTime" column="create_time"/>
         <result property="updateBy" column="update_by"/>
         <result property="updateTime" column="update_time"/>

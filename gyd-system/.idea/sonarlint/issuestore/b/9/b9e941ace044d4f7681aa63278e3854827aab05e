@@ -1,37 +1,0 @@
-
-J
-java:S3740S"/Provide the parametrized type for this generic.(œ˜ÅÁüÿÿÿÿ
-7
-java:S1643@"Use a StringBuilder instead.(ï—ê–þÿÿÿÿ
-2
-java:S1643_"Use a StringBuilder instead.(…£Ôâ
-7
-java:S1643a"Use a StringBuilder instead.(ÜÇá†üÿÿÿÿ
-2
-java:S1643c"Use a StringBuilder instead.(øåúµ
-7
-java:S1643g"Use a StringBuilder instead.(¯¾ŠÛüÿÿÿÿ
-7
-java:S1643h"Use a StringBuilder instead.(¾íã¿øÿÿÿÿ
-7
-java:S1643k"Use a StringBuilder instead.(ÖðŽžþÿÿÿÿ
-2
-java:S1643l"Use a StringBuilder instead.(ßš¼á
-2
-java:S1643z"Use a StringBuilder instead.(»›»Ø
-v
-java:S1488S"[Immediately return this expression instead of assigning it to the temporary variable "map".(œ˜ÅÁüÿÿÿÿ
-j
-java:S3252C"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(‹í¶üÿÿÿÿÿ
-M
-java:S1135I"2Complete the task associated to this TODO comment.(¨‰Ñùùÿÿÿÿ
-f
-java:S3252^"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "containsAny".(Þ¬‚â
-a
-java:S3252^"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(Þ¬‚â
-j
-java:S3252`"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithAny".(¼Ý¸Îúÿÿÿÿ
-f
-java:S3252f"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(’ëÕ´þÿÿÿÿ
-a
-java:S3252j"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(£Ïœß

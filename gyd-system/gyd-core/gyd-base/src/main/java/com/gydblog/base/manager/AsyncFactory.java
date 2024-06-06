@@ -5,7 +5,7 @@ import com.gydblog.common.domain.entity.SysLoginLogEntity;
 import com.gydblog.common.domain.entity.SysOperLogEntity;
 import com.gydblog.common.utils.LogUtils;
 import com.gydblog.common.utils.ServletUtils;
-import com.gydblog.common.utils.SpringUtils;
+import com.gydblog.common.utils.spring.SpringUtils;
 import com.gydblog.common.utils.StringUtils;
 import com.gydblog.common.utils.ip.AddressUtils;
 import com.gydblog.common.utils.ip.IpUtils;

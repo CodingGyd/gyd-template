@@ -122,7 +122,7 @@ public class Column extends BaseEntity {
     }
 
     public static boolean isSuperColumn(String javaField) {
-        return StrUtil.equalsAnyIgnoreCase(javaField, "createBy", "createTime", "updateBy", "updateTime", "remarks", "delFlag");
+        return StrUtil.equalsAnyIgnoreCase(javaField, "createUser", "createTime", "updateUser", "updateTime", "remarks", "delFlag");
     }
 
     public String convertExp() {

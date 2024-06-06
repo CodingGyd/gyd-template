@@ -1,7 +1,8 @@
 package com.gydblog.common.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.gydblog.common.domain.entity.SysMenuEntity;
+import com.gydblog.common.domain.entity.SysDept;
+import com.gydblog.common.domain.entity.SysMenu;
 import com.gydblog.common.domain.entity.SysResourceEntity;
 
 import java.io.Serializable;
@@ -16,30 +17,20 @@ import java.util.stream.Collectors;
 public class TreeSelect implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 节点ID
-     */
+    /** 节点ID */
     private Long id;
 
-    /**
-     * 节点名称
-     */
+    /** 节点名称 */
     private String label;
 
-    /**
-     * 子节点
-     */
+    /** 子节点 */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<TreeSelect> children;
 
-    public TreeSelect() {
-    }
+    public TreeSelect()
+    {
 
-    public TreeSelect(Long id, String label) {
-        this.id = id;
-        this.label = label;
     }
-
 
     public TreeSelect(Long id, String label, List<SysResourceEntity> resources) {
         this.id = id;
@@ -47,38 +38,51 @@ public class TreeSelect implements Serializable {
         this.children = resources.stream().map(TreeSelect::new).collect(Collectors.toList());
     }
 
-    public TreeSelect(SysMenuEntity menu) {
-        this.id = menu.getMenuId();
-        this.label = menu.getMenuName();
-        this.children = menu.getChildren().stream().map(TreeSelect::new).collect(Collectors.toList());
+    public TreeSelect(SysDept dept)
+    {
+        this.id = dept.getDeptId();
+        this.label = dept.getDeptName();
+        this.children = dept.getChildren().stream().map(TreeSelect::new).collect(Collectors.toList());
     }
 
     public TreeSelect(SysResourceEntity resource) {
         this.id = resource.getResourceId();
         this.label = resource.getResourceName();
     }
+    public TreeSelect(SysMenu menu)
+    {
+        this.id = menu.getMenuId();
+        this.label = menu.getMenuName();
+        this.children = menu.getChildren().stream().map(TreeSelect::new).collect(Collectors.toList());
+    }
 
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
-    public String getLabel() {
+    public String getLabel()
+    {
         return label;
     }
 
-    public void setLabel(String label) {
+    public void setLabel(String label)
+    {
         this.label = label;
     }
 
-    public List<TreeSelect> getChildren() {
+    public List<TreeSelect> getChildren()
+    {
         return children;
     }
 
-    public void setChildren(List<TreeSelect> children) {
+    public void setChildren(List<TreeSelect> children)
+    {
         this.children = children;
     }
 }

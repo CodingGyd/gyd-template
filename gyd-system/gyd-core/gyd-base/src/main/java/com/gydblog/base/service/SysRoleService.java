@@ -2,7 +2,7 @@ package com.gydblog.base.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.gydblog.common.domain.PageResult;
-import com.gydblog.common.domain.entity.SysRoleEntity;
+import com.gydblog.common.domain.entity.SysRole;
 import com.gydblog.common.domain.entity.SysUserRoleEntity;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Set;
 public interface SysRoleService extends IService<SysUserRoleEntity> {
 
 
-    PageResult<SysRoleEntity> page(SysRoleEntity sysRoleEntity);
+    PageResult<SysRole> page(SysRole SysRole);
 
     /**
      * 根据条件分页查询角色数据
@@ -19,7 +19,7 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param role 角色信息
      * @return 角色数据集合信息
      */
-    List<SysRoleEntity> selectRoleList(SysRoleEntity role);
+    List<SysRole> selectRoleList(SysRole role);
 
     /**
      * 根据用户ID查询角色权限
@@ -35,14 +35,14 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param roleId 角色ID
      * @return 角色对象信息
      */
-    SysRoleEntity selectRoleById(Long roleId);
+    SysRole selectRoleById(Long roleId);
 
     /**
      * 查询所有角色
      *
      * @return 角色列表
      */
-    List<SysRoleEntity> selectRoleAll();
+    List<SysRole> selectRoleAll();
 
     /**
      * 根据用户ID查询角色列表
@@ -50,7 +50,7 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param userId 用户ID
      * @return 角色列表
      */
-    List<SysRoleEntity> selectRolesByUserId(Long userId);
+    List<SysRole> selectRolesByUserId(Long userId);
 
 
     /**
@@ -59,7 +59,7 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param role 角色信息
      * @return 结果
      */
-     int insertRole(SysRoleEntity role);
+     int insertRole(SysRole role);
 
     /**
      * 修改保存角色信息
@@ -67,7 +67,7 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param role 角色信息
      * @return 结果
      */
-     int updateRole(SysRoleEntity role);
+     int updateRole(SysRole role);
 
     /**
      * 修改角色状态
@@ -75,7 +75,7 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param role 角色信息
      * @return 结果
      */
-     int updateRoleStatus(SysRoleEntity role);
+     int updateRoleStatus(SysRole role);
 
     /**
      * 批量删除角色信息
@@ -125,7 +125,7 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param role 角色信息
      * @return 结果
      */
-     boolean checkRoleNameUnique(SysRoleEntity role);
+     boolean checkRoleNameUnique(SysRole role);
 
     /**
      * 校验角色权限是否唯一
@@ -133,14 +133,14 @@ public interface SysRoleService extends IService<SysUserRoleEntity> {
      * @param role 角色信息
      * @return 结果
      */
-    boolean checkRoleKeyUnique(SysRoleEntity role);
+    boolean checkRoleKeyUnique(SysRole role);
 
     /**
      * 校验角色是否允许操作
      *
      * @param role 角色信息
      */
-    void checkRoleAllowed(SysRoleEntity role);
+    void checkRoleAllowed(SysRole role);
 
     /**
      * 重置角色的资源和菜单权限缓存

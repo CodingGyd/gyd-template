@@ -4,6 +4,7 @@ import com.alibaba.fastjson2.JSONArray;
 import com.gydblog.common.constant.CacheConstants;
 import com.gydblog.common.core.RedisCache;
 import com.gydblog.common.domain.entity.SysDictDataEntity;
+import com.gydblog.common.utils.spring.SpringUtils;
 
 import java.util.Collection;
 import java.util.List;
@@ -153,5 +154,26 @@ public class DictUtils {
      */
     public static String getCacheKey(String configKey) {
         return CacheConstants.SYS_DICT_KEY + configKey;
+    }
+
+    /**
+     * 根据字典类型获取字典所有标签
+     *
+     * @param dictType 字典类型
+     * @return 字典值
+     */
+    public static String getDictLabels(String dictType)
+    {
+        StringBuilder propertyString = new StringBuilder();
+        List<SysDictDataEntity> datas = getDictCache(dictType);
+        if (StringUtils.isNull(datas))
+        {
+            return StringUtils.EMPTY;
+        }
+        for (SysDictDataEntity dict : datas)
+        {
+            propertyString.append(dict.getDictLabel()).append(SEPARATOR);
+        }
+        return StringUtils.stripEnd(propertyString.toString(), SEPARATOR);
     }
 }

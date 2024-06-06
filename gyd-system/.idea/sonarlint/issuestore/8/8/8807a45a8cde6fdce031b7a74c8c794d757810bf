@@ -1,0 +1,108 @@
+
+h	java:S112Ë"FDefine and throw a dedicated exception instead of using a generic one.(‚×À¹úÿÿÿÿ8²²“Ãü1
+h	java:S112Í"FDefine and throw a dedicated exception instead of using a generic one.(ãˆ“¥üÿÿÿÿ8²²“Ãü1
+h	java:S112Ï"FDefine and throw a dedicated exception instead of using a generic one.(ƒ®„—şÿÿÿÿ8²²“Ãü1
+w
+java:S2293µ"YReplace the type specification in this constructor call with the diamond operator ("<>").(èôí´8í‰ÇÃü1
+k
+java:S1192L"IDefine a constant instead of duplicating this literal "table_id" 7 times.(Á¡ÊÉúÿÿÿÿ8´²“Ãü1
+h
+java:S1192J"KDefine a constant instead of duplicating this literal "table_name" 5 times.(’‘ÿñ8´²“Ãü1
+R
+java:S1066´"/Merge this if statement with the enclosing one.(ÈñÅ‘ÿÿÿÿÿ8µ²“Ãü1
+i
+java:S2259‰"FA "NullPointerException" could be thrown; "oldTable" is nullable here.(€áû‚úÿÿÿÿ8Èåêı1
+o
+java:S3776?"RRefactor this method to reduce its Cognitive Complexity from 67 to the 15 allowed.(¶ê·ì8Ç²“Ãü1
+i
+java:S3252A"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isBlank".(–ÇÓ®8›ÈÑÃü1
+j
+java:S3252L"HUse static access with "cn.hutool.core.util.StrUtil" for "isBlankIfStr".(Á¡ÊÉúÿÿÿÿ8ÈÑÃü1
+l
+java:S3252S"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(’‘Ò8ÈÑÃü1
+q
+java:S3252T"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "upperFirst".(¸˜Äéøÿÿÿÿ8ÈÑÃü1
+r
+java:S3252T"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(¸˜Äéøÿÿÿÿ8ÈÑÃü1
+n
+java:S3252T"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "replace".(¸˜Äéøÿÿÿÿ8ÈÑÃü1
+q
+java:S3252V"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "upperFirst".(›Şø„ıÿÿÿÿ8ÈÑÃü1
+r
+java:S3252V"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(›Şø„ıÿÿÿÿ8ŸÈÑÃü1
+l
+java:S3252Z"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "lowerFirst".(ÉıŞä8ŸÈÑÃü1
+m
+java:S3252l"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(¯‚Ÿ•8¡ÈÑÃü1
+s
+java:S3252{"QUse static access with "cn.hutool.core.text.CharSequenceUtil" for "splitToArray".(ê×»æøÿÿÿÿ8¡ÈÑÃü1
+q
+java:S3252{"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "subBetween".(ê×»æøÿÿÿÿ8¢ÈÑÃü1
+n
+java:S3252Š"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(ãš‹÷ıÿÿÿÿ8£ÈÑÃü1
+n
+java:S3252"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(ãš‹÷ıÿÿÿÿ8£ÈÑÃü1
+n
+java:S3252“"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(Ó¡åôÿÿÿÿÿ8£ÈÑÃü1
+i
+java:S3252—"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(—œ¶×8¤ÈÑÃü1
+t
+java:S3252œ"VUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithIgnoreCase".(ˆ‚æ8¤ÈÑÃü1
+s
+java:S3252"VUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithIgnoreCase".(Õ‡Á!8¤ÈÑÃü1
+t
+java:S3252¥"VUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithIgnoreCase".(½«©´8¤ÈÑÃü1
+y
+java:S3252©"VUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithIgnoreCase".(¨àä§úÿÿÿÿ8¤ÈÑÃü1
+y
+java:S3252ª"VUse static access with "cn.hutool.core.text.CharSequenceUtil" for "endWithIgnoreCase".(ÀÓ®™ûÿÿÿÿ8¥ÈÑÃü1
+r
+java:S3252³"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(ø Äúÿÿÿÿ8¥ÈÑÃü1
+j
+java:S3252Ê"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(ÀÊáç8¦ÈÑÃü1
+j
+java:S3252Ì"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(¤­á8¨ÈÑÃü1
+o
+java:S3252Î"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(Ãß¢ûÿÿÿÿ8¨ÈÑÃü1
+p
+java:S3776Ü"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(ØÇ†’8Ú²“Ãü1
+f
+java:S3252ß"HUse static access with "cn.hutool.core.util.StrUtil" for "isBlankIfStr".(ïÊş­8©ÈÑÃü1
+m
+java:S3252ã"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(Û´ëé8©ÈÑÃü1
+n
+java:S3252æ"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Ê‰’›8ªÈÑÃü1
+r
+java:S3252ò"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(ÛÆÅÉúÿÿÿÿ8ªÈÑÃü1
+h
+java:S3252ó"JUse static access with "cn.hutool.core.text.CharSequenceUtil" for "split".(¶•·Ş8«ÈÑÃü1
+Y	java:S125û"<This block of commented-out lines of code should be removed.(²Ğï8İ²“Ãü1
+m
+java:S3252‚"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(ÔñŸ…8­ÈÑÃü1
+m
+java:S3252ˆ"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(ÔñŸ…8­ÈÑÃü1
+^	java:S125‘"<This block of commented-out lines of code should be removed.(‚Ê·ûşÿÿÿÿ8à²“Ãü1
+m
+java:S3252”"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(Û´ëé8®ÈÑÃü1
+n
+java:S3252–"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "toCamelCase".(Ê‰’›8®ÈÑÃü1
+J
+java:S1874ù"-Remove this use of "write"; it is deprecated.(ü¿“O8è²“Ãü1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Å‹‘8ê²“Ãü1
+n
+java:S3252¦"PUse static access with "cn.hutool.core.text.CharSequenceUtil" for "containsAny".(°ˆ„í8¸ÈÑÃü1
+p
+java:S3252¨"MUse static access with "cn.hutool.core.text.CharSequenceUtil" for "contains".(™µşÔüÿÿÿÿ8¸ÈÑÃü1
+K
+java:S1874®"-Remove this use of "write"; it is deprecated.(°Ç§8í²“Ãü1
+a
+java:S1155²">Use isEmpty() to check whether the collection is empty or not.(óÿÚÜüÿÿÿÿ8î²“Ãü1
+r
+java:S3252´"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(ÈñÅ‘ÿÿÿÿÿ8ºÈÑÃü1
+i
+java:S3252Ì"KUse static access with "cn.hutool.core.text.CharSequenceUtil" for "equals".(Ş¿’ˆ8»ÈÑÃü1
+r
+java:S3252Ú"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotEmpty".(¥‰ı÷ÿÿÿÿÿ8¼ÈÑÃü1
+ä
+java:S6541?"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 108 to 64, Complexity from 31 to 14, Nesting Level from 5 to 2, Number of Variables from 17 to 6.(¶ê·ì8ò²“Ãü1

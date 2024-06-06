@@ -3,7 +3,7 @@ package com.gydblog.mt.service;
 import com.gydblog.mt.api.PushPlusApi;
 import com.gydblog.mt.entity.ILog;
 import com.gydblog.mt.entity.IUser;
-import com.gydblog.common.utils.SpringUtils;
+import com.gydblog.common.utils.spring.SpringUtils;
 import com.gydblog.base.manager.AsyncManager;
 
 import java.util.Date;

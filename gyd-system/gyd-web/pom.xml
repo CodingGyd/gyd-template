@@ -24,6 +24,18 @@
             <artifactId>gyd-admin</artifactId>
             <version>${revision}</version>
         </dependency>
+        <!-- 定时任务业务模块-->
+        <dependency>
+            <groupId>com.gydblog</groupId>
+            <artifactId>gyd-quartz</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <!-- 系统监控业务模块-->
+        <dependency>
+            <groupId>com.gydblog</groupId>
+            <artifactId>gyd-monitor</artifactId>
+            <version>${revision}</version>
+        </dependency>
         <!-- 开发工具业务模块-->
         <dependency>
             <groupId>com.gydblog</groupId>

@@ -1,7 +1,7 @@
 package com.gydblog.base.service;
 
 import com.gydblog.common.domain.PageResult;
-import com.gydblog.common.domain.entity.SysUserEntity;
+import com.gydblog.common.domain.entity.SysUser;
 
 import java.util.List;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
 
 public interface SysUserService {
 
-    PageResult<SysUserEntity> page(SysUserEntity sysUserEntity);
+    PageResult<SysUser> page(SysUser SysUser);
 
 
     /**
@@ -18,7 +18,7 @@ public interface SysUserService {
      * @param userName 用户名
      * @return 用户对象信息
      */
-    SysUserEntity selectUserByUserName(String userName);
+    SysUser selectUserByUserName(String userName);
 
     /**
      * 通过用户ID查询用户
@@ -26,7 +26,7 @@ public interface SysUserService {
      * @param userId 用户ID
      * @return 用户对象信息
      */
-    SysUserEntity selectUserById(Long userId);
+    SysUser selectUserById(Long userId);
 
     /**
      * 根据条件分页查询已分配用户角色列表
@@ -34,7 +34,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    List<SysUserEntity> selectAllocatedList(SysUserEntity user);
+    List<SysUser> selectAllocatedList(SysUser user);
 
     /**
      * 根据条件分页查询未分配用户角色列表
@@ -42,7 +42,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    List<SysUserEntity> selectUnallocatedList(SysUserEntity user);
+    List<SysUser> selectUnallocatedList(SysUser user);
 
     /**
      * 根据用户ID查询用户所属角色组
@@ -58,7 +58,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-     boolean registerUser(SysUserEntity user);
+     boolean registerUser(SysUser user);
 
     /**
      * 新增用户信息
@@ -66,7 +66,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-    int insertUser(SysUserEntity user);
+    int insertUser(SysUser user);
 
     /**
      * 修改用户信息
@@ -74,7 +74,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-    int updateUser(SysUserEntity user);
+    int updateUser(SysUser user);
 
     /**
      * 批量删除用户信息
@@ -90,7 +90,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-    int updateUserProfile(SysUserEntity user);
+    int updateUserProfile(SysUser user);
 
     /**
      * 修改用户状态
@@ -98,7 +98,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-    int updateUserStatus(SysUserEntity user);
+    int updateUserStatus(SysUser user);
 
     /**
      * 修改用户头像
@@ -115,14 +115,14 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-    int resetPwd(SysUserEntity user);
+    int resetPwd(SysUser user);
 
     /**
      * 校验用户是否允许操作
      *
      * @param user 用户信息
      */
-    void checkUserAllowed(SysUserEntity user);
+    void checkUserAllowed(SysUser user);
 
     /**
      * 用户授权角色(先删除再添加)
@@ -155,7 +155,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果
      */
-     boolean checkUserNameUnique(SysUserEntity user);
+     boolean checkUserNameUnique(SysUser user);
 
     /**
      * 校验手机号码是否唯一
@@ -163,7 +163,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果 true为唯一
      */
-    boolean checkPhoneUnique(SysUserEntity user);
+    boolean checkPhoneUnique(SysUser user);
 
     /**
      * 校验email是否唯一
@@ -171,7 +171,7 @@ public interface SysUserService {
      * @param user 用户信息
      * @return 结果 true为唯一
      */
-    boolean checkEmailUnique(SysUserEntity user);
+    boolean checkEmailUnique(SysUser user);
 
 
 }

@@ -1,7 +1,7 @@
 package com.gydblog.base.service;
 
 import com.gydblog.common.domain.TreeSelect;
-import com.gydblog.common.domain.entity.SysMenuEntity;
+import com.gydblog.common.domain.entity.SysMenu;
 import com.gydblog.common.domain.model.SysRoleAuth;
 import com.gydblog.common.domain.vo.RouterVo;
 
@@ -18,7 +18,7 @@ public interface SysMenuService {
      * @param userId 用户ID
      * @return 菜单列表
      */
-    List<SysMenuEntity> selectMenuList(Long userId);
+    List<SysMenu> selectMenuList(Long userId);
 
 
     /**
@@ -28,7 +28,7 @@ public interface SysMenuService {
      * @param userId 用户ID
      * @return 菜单列表
      */
-    List<SysMenuEntity> selectMenuList(SysMenuEntity menu, Long userId);
+    List<SysMenu> selectMenuList(SysMenu menu, Long userId);
 
     /**
      * 根据用户ID查询菜单树信息
@@ -36,7 +36,7 @@ public interface SysMenuService {
      * @param userId 用户ID
      * @return 菜单列表
      */
-    List<SysMenuEntity> selectMenuTreeByUserId(Long userId);
+    List<SysMenu> selectMenuTreeByUserId(Long userId);
 
     /**
      * 根据角色ID查询菜单树信息
@@ -52,7 +52,7 @@ public interface SysMenuService {
      * @param menuId 菜单ID
      * @return 菜单信息
      */
-    SysMenuEntity selectMenuById(Long menuId);
+    SysMenu selectMenuById(Long menuId);
 
     /**
      * 构建前端路由所需要的菜单
@@ -60,7 +60,7 @@ public interface SysMenuService {
      * @param menus 菜单列表
      * @return 路由列表
      */
-    List<RouterVo> buildMenus(List<SysMenuEntity> menus);
+    List<RouterVo> buildMenus(List<SysMenu> menus);
 
     /**
      * 构建前端所需要树结构
@@ -68,7 +68,7 @@ public interface SysMenuService {
      * @param menus 菜单列表
      * @return 树结构列表
      */
-    List<SysMenuEntity> buildMenuTree(List<SysMenuEntity> menus);
+    List<SysMenu> buildMenuTree(List<SysMenu> menus);
 
     /**
      * 构建前端所需要下拉树结构
@@ -76,7 +76,7 @@ public interface SysMenuService {
      * @param menus 菜单列表
      * @return 下拉树结构列表
      */
-    List<TreeSelect> buildMenuTreeSelect(List<SysMenuEntity> menus);
+    List<TreeSelect> buildMenuTreeSelect(List<SysMenu> menus);
 
     /**
      * 根据角色ID查询权限
@@ -107,7 +107,7 @@ public interface SysMenuService {
      * @param menu 菜单信息
      * @return 结果
      */
-    int insertMenu(SysMenuEntity menu);
+    int insertMenu(SysMenu menu);
 
     /**
      * 修改保存菜单信息
@@ -115,7 +115,7 @@ public interface SysMenuService {
      * @param menu 菜单信息
      * @return 结果
      */
-    int updateMenu(SysMenuEntity menu);
+    int updateMenu(SysMenu menu);
 
     /**
      * 删除菜单管理信息
@@ -147,5 +147,5 @@ public interface SysMenuService {
      * @param menu 菜单信息
      * @return 结果 true为唯一
      */
-    boolean checkMenuNameUnique(SysMenuEntity menu);
+    boolean checkMenuNameUnique(SysMenu menu);
 }

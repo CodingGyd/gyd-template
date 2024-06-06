@@ -121,9 +121,13 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
     }
 
     /**
-     * 计算两个时间差
+     * 计算时间差
+     *
+     * @param endDate 最后时间
+     * @param startTime 开始时间
+     * @return 时间差（天/小时/分钟）
      */
-    public static String getDatePoor(Date endDate, Date nowDate) {
+    public static String timeDistance(Date endDate, Date nowDate) {
         long nd = 1000 * 24 * 60 * 60;
         long nh = 1000 * 60 * 60;
         long nm = 1000 * 60;
