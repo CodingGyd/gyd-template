@@ -1,11 +1,0 @@
-
-IWeb:AvoidCommentedOutCodeCheck="Remove this commented out code.(ï‘Ï‡
-@javascript:S125…"Remove this commented out code.(İúšÑûÿÿÿÿ
-Ujavascript:S1481‹"3Remove the declaration of the unused 'id' variable.(Ğ²­¾øÿÿÿÿ
-Rjavascript:S1854‹"0Remove this useless assignment to variable "id".(Ğ²­¾øÿÿÿÿ
-qjavascript:S3776–"TRefactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.(äëß¬
-njavascript:S4138™"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ı³Šİÿÿÿÿÿ
-Fjavascript:S3504¾")Unexpected var, use let or const instead.(Ä¾îĞ
-Fjavascript:S3504Ò")Unexpected var, use let or const instead.(Ä¾îĞ
-Fjavascript:S3504î")Unexpected var, use let or const instead.(çÉÄ
-Fjavascript:S3504ô")Unexpected var, use let or const instead.(Â®¤

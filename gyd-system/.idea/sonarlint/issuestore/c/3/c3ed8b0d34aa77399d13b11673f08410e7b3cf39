@@ -1,4 +1,0 @@
-
-i
-java:S1104#"TMake ASTERISK a static final constant or non-public and provide accessors if needed.(ŽÅŽe
-g	java:S116#"SRename this field "ASTERISK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽÅŽe

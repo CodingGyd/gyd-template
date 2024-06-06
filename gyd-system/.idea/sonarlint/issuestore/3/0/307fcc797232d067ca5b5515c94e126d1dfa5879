@@ -1,6 +1,0 @@
-
-y	java:S116"]Rename this field "OPERATE_DELAY_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç˜¶Å8„ÕÃ°ş1
->
-java:S1170"!Make this final field static too.(ç˜¶Å8„ÕÃ°ş1
-¶
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(Öö“Ò8‡ÕÃ°ş1

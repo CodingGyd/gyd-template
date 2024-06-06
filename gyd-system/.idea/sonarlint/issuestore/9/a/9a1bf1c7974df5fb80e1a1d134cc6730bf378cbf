@@ -1,15 +1,0 @@
-
-v
-java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ž´·ê8™•žçý1
-v
-java:S2293R"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ž—Œâ8š•žçý1
-y	java:S116"XRename this field "REPEAT_PARAMS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íØ“†ùÿÿÿÿ8Â•žçý1
-r	java:S116"VRename this field "REPEAT_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ’î®8Ã•žçý1
-C
-java:S1170"!Make this final field static too.(íØ“†ùÿÿÿÿ8Å•žçý1
->
-java:S1170"!Make this final field static too.(õ’î®8Æ•žçý1
-r
-java:S3252@"PUse static access with "org.apache.commons.lang3.StringUtils" for "trimToEmpty".(ÚîÂ‘üÿÿÿÿ8Ô•žçý1
-c
-java:S1126i"AReplace this if-then-else statement by a single return statement.(Õ¯©žÿÿÿÿÿ8Ù•žçý1

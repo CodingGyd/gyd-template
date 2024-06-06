@@ -1,173 +1,0 @@
-
-c	java:S112ˆ"FDefine and throw a dedicated exception instead of using a generic one.(¿ò‘¬8€µ¸”ş1
-v
-java:S2293="YReplace the type specification in this constructor call with the diamond operator ("<>").(‹ß¥æ8†µ¸”ş1
-|
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(»”Êøøÿÿÿÿ8ˆµ¸”ş1
-w
-java:S2293²"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦ìØï8‰µ¸”ş1
-|
-java:S2293£"YReplace the type specification in this constructor call with the diamond operator ("<>").(„¢Áòÿÿÿÿÿ8Šµ¸”ş1
-|
-java:S2293¹"YReplace the type specification in this constructor call with the diamond operator ("<>").(î÷éøÿÿÿÿ8‹µ¸”ş1
-w
-java:S2293Ë"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ë”±æ8µ¸”ş1
-w
-java:S2293ã"YReplace the type specification in this constructor call with the diamond operator ("<>").(åšÉô8µ¸”ş1
-|
-java:S2293™"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÇÛ‘ùÿÿÿÿ8‘µ¸”ş1
-w
-java:S2293½"YReplace the type specification in this constructor call with the diamond operator ("<>").(åšÉô8“µ¸”ş1
-|
-java:S2293£"YReplace the type specification in this constructor call with the diamond operator ("<>").(şƒ…¸şÿÿÿÿ8–µ¸”ş1
-w
-java:S2293×"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ä‘á²8˜µ¸”ş1
-w
-java:S2293ø"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ä‘á²8›µ¸”ş1
-v
-java:S2293Ì"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦’"8œµ¸”ş1
-p
-java:S1192å"MDefine a constant instead of duplicating this literal "header_{}_{}" 3 times.(å½”˜şÿÿÿÿ8«µ¸”ş1
-t
-java:S1192Ş"QDefine a constant instead of duplicating this literal "data_{}_{}_{}_{}" 3 times.(™Äƒõıÿÿÿÿ8²µ¸”ş1
-i
-java:S1192è"FDefine a constant instead of duplicating this literal "Arial" 5 times.(´µÜÕùÿÿÿÿ8»µ¸”ş1
-j
-java:S1192î"GDefine a constant instead of duplicating this literal "combo_" 4 times.(¬”ùÿÿÿÿ8Âµ¸”ş1
-i
-java:S1192ˆ"FDefine a constant instead of duplicating this literal "total" 3 times.(Üõ·îÿÿÿÿÿ8ãµ¸”ş1
-s
-java:S1104="VMake sysDictMap a static final constant or non-public and provide accessors if needed.(‹ß¥æ8Œ¶¸”ş1
-n
-java:S1104—"QMake clazz a static final constant or non-public and provide accessors if needed.(”¹„=8¶¸”ş1
-w
-java:S1104œ"YMake excludeFields a static final constant or non-public and provide accessors if needed.(ş€ƒß8¶¸”ş1
-^
-java:S1226¢"@Introduce a new variable instead of reusing the parameter "row".(¿©•Œ8º·¸”ş1
-^
-java:S1226À"@Introduce a new variable instead of reusing the parameter "row".(¿©•Œ8¾·¸”ş1
-u	java:S115B"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(®ëö+8×½¸”ş1
-?
-java:S23868"Make this member "protected".(ÅŞÅšûÿÿÿÿ8ß½¸”ş1
-‚
-java:S1149Ú"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(£éè­üÿÿÿÿ8ê½¸”ş1
-V
-java:S1117ú"8Rename "list" which hides the field declared at line 96.(Ğ²Úº8‡¾¸”ş1
-{
-java:S2139ÿ"XEither log this exception and handle it, or rethrow it with some contextual information.(¼Ôîàùÿÿÿÿ8ˆ¾¸”ş1
-h
-java:S3252”"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(Ï™ß8¾¸”ş1
-u
-java:S3776Ÿ"RRefactor this method to reduce its Cognitive Complexity from 96 to the 15 allowed.(Ï’üŸûÿÿÿÿ8¾¸”ş1
-[
-java:S1117£"8Rename "list" which hides the field declared at line 96.(„¢Áòÿÿÿÿÿ8”¾¸”ş1
-W
-java:S1117¥"9Rename "sheet" which hides the field declared at line 86.(Ä˜ÛŒ8•¾¸”ş1
-^
-java:S1117Ê";Rename "fields" which hides the field declared at line 101.(Ùùß€üÿÿÿÿ8š¾¸”ş1
-p
-java:S3252í"MUse static access with "org.apache.commons.lang3.StringUtils" for "endsWith".(ó´Ùîùÿÿÿÿ8Ÿ¾¸”ş1
-r
-java:S3252ï"TUse static access with "org.apache.commons.lang3.StringUtils" for "substringBefore".(Ùëö8 ¾¸”ş1
-q
-java:S3252ş"NUse static access with "org.apache.commons.lang3.StringUtils" for "isNumeric".(Û ûÿÿÿÿ8¡¾¸”ş1
-l
-java:S3252‚"NUse static access with "org.apache.commons.lang3.StringUtils" for "isNumeric".(‡ÜŠŠ8¢¾¸”ş1
-h
-java:S3252Ø"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(‹è¤‰8«¾¸”ş1
-h
-java:S3252ó"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(€²èì8­¾¸”ş1
-m
-java:S3252"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(Â‹ùåûÿÿÿÿ8°¾¸”ş1
-m
-java:S3252§"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(½ÎØ€úÿÿÿÿ8²¾¸”ş1
-M
-java:S2093×"*Change this "try" to a try-with-resources.(ç£êúÿÿÿÿ8¼¾¸”ş1
-o
-java:S3776š"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(äå¯58Á¾¸”ş1
-g
-java:S3358¡"DExtract this nested ternary operation into an independent statement.(ãŸ™ÿÿÿÿÿ8Ä¾¸”ş1
-L
-java:S1905¤")Remove this unnecessary cast to "Object".(Æõá‡ÿÿÿÿÿ8Å¾¸”ş1
-\
-java:S1117Â">Rename "subFields" which hides the field declared at line 136.(÷†Ø¯8È¾¸”ş1
-J
-java:S3011È",This accessibility update should be removed.(–£˜ì8Ê¾¸”ş1
-X
-java:S1117ã":Rename "styles" which hides the field declared at line 91.(åšÉô8Ï¾¸”ş1
-F
-java:S1172»")Remove this unused method parameter "wb".(”´ø8í¾¸”ş1
-X
-java:S1117½":Rename "styles" which hides the field declared at line 91.(åšÉô8î¾¸”ş1
-a
-java:S1117Æ">Rename "subFields" which hides the field declared at line 136.(š€½…şÿÿÿÿ8ğ¾¸”ş1
-p
-java:S3776š"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(çƒÑ¤8‚¿¸”ş1
-u
-java:S3252 "RUse static access with "org.apache.commons.lang3.StringUtils" for "startsWithAny".(¼ÔŒùÿÿÿÿ8†¿¸”ş1
-R
-java:S60356"0Replace this alternation with a character class.(ğ€İ›üÿÿÿÿ8‡¿¸”ş1
-i
-java:S3252¤"KUse static access with "org.apache.commons.lang3.StringUtils" for "equals".(·ÔúÜ8ˆ¿¸”ş1
-m
-java:S3252¦"JUse static access with "org.apache.commons.lang3.StringUtils" for "EMPTY".(Ãòåõıÿÿÿÿ8‰¿¸”ş1
-S
-java:S2154®"0Add an explicit cast to match types of operands.(¡òô¨øÿÿÿÿ8Š¿¸”ş1
-p
-java:S3252®"MUse static access with "org.apache.commons.lang3.StringUtils" for "contains".(¡òô¨øÿÿÿÿ8‹¿¸”ş1
-I
-java:S1452Á"&Remove usage of generic wildcard type.(‚¨½²øÿÿÿÿ8‘¿¸”ş1
-V
-java:S1117Ï"8Rename "type" which hides the field declared at line 76.(¯°›¦8•¿¸”ş1
-M
-java:S1172Ş"*Remove this unused method parameter "row".(‹Ğ—ıÿÿÿÿ8˜¿¸”ş1
-h
-java:S3252ô"JUse static access with "org.apache.commons.lang3.StringUtils" for "split".(“Š¥ä8›¿¸”ş1
-l
-java:S3252ö"IUse static access with "org.apache.commons.lang3.StringUtils" for "join".(æòîñùÿÿÿÿ8œ¿¸”ş1
-u
-java:S3776†"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Ù¯èùÿÿÿÿ8Ÿ¿¸”ş1
-3
-java:S3457Â"Not enough arguments.(­³ÙŠ8¸¿¸”ş1
-s
-java:S3252¯	"PUse static access with "org.apache.commons.lang3.StringUtils" for "containsAny".(íı¦×úÿÿÿÿ8Î¿¸”ş1
-k
-java:S3252Â	"MUse static access with "org.apache.commons.lang3.StringUtils" for "stripEnd".(´´8Ñ¿¸”ş1
-s
-java:S3252Ô	"PUse static access with "org.apache.commons.lang3.StringUtils" for "containsAny".(íı¦×úÿÿÿÿ8Ö¿¸”ş1
-k
-java:S3252ç	"MUse static access with "org.apache.commons.lang3.StringUtils" for "stripEnd".(´´8Ú¿¸”ş1
-K	java:S108«
-")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ8ä¿¸”ş1
-X
-java:S1117Œ":Rename "clazz" which hides the field declared at line 151.(şÑÜ8‡À¸”ş1
-J
-java:S3011",This accessibility update should be removed.(˜ÂÓ˜8‰À¸”ş1
-p
-java:S3776¡"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(…ÉŒ8›À¸”ş1
-^
-java:S1117£";Rename "fields" which hides the field declared at line 101.(şƒ…¸şÿÿÿÿ8À¸”ş1
-J
-java:S3011±",This accessibility update should be removed.(˜ÂÓ˜8¡À¸”ş1
-J
-java:S3011Ç",This accessibility update should be removed.(˜ÂÓ˜8¥À¸”ş1
-\
-java:S1117Ö">Rename "maxHeight" which hides the field declared at line 116.(ª¥û‹8§À¸”ş1
-u
-java:S3776‚"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ŠÿÅÈÿÿÿÿÿ8°À¸”ş1
-R
-java:S1172ö"/Remove this unused method parameter "workbook".(Î€Üışÿÿÿÿ8ÄÀ¸”ş1
-a
-java:S1155µ">Use isEmpty() to check whether the collection is empty or not.(¸òÅïúÿÿÿÿ8ÏÀ¸”ş1
-a
-java:S1155½">Use isEmpty() to check whether the collection is empty or not.(øãßÁûÿÿÿÿ8ÒÀ¸”ş1
-a
-java:S1155½">Use isEmpty() to check whether the collection is empty or not.(øãßÁûÿÿÿÿ8ÔÀ¸”ş1
-D
-java:S1452Ã"&Remove usage of generic wildcard type.(©šº¨8×À¸”ş1
-f
-java:S3878È"CDisambiguate this call by either casting as "Object" or "Object[]".(ÃªÚÇıÿÿÿÿ8ØÀ¸”ş1
->
-java:S3878à"Remove this array creation.(­æ„¢ùÿÿÿÿ8ÜÀ¸”ş1
-ê
-java:S6541Ÿ"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 163 to 64, Complexity from 41 to 14, Nesting Level from 6 to 2, Number of Variables from 32 to 6.(Ï’üŸûÿÿÿÿ8áÀ¸”ş1

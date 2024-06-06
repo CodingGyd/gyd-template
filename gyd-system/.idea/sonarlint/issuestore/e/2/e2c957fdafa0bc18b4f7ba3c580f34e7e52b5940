@@ -1,23 +1,0 @@
-
-h	java:S112ά"FDefine and throw a dedicated exception instead of using a generic one.(Ϋ’χΓψÿÿÿÿ8Ιεαδώ1
-?
-java:S1643ρ"Use a StringBuilder instead.(µΫά•ωÿÿÿÿ8Πεαδώ1
-F
-java:S5411–"(Use a primitive boolean expression here.(ΒάΛ8Ρεαδώ1
-?
-java:S23869"Make this member "protected".(‡—Α†ώÿÿÿÿ8…ζαδώ1
-m
-java:S3252„"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(ΥνΟΤ8”ζαδώ1
-^	java:S125"<This block of commented-out lines of code should be removed.(ΡΩηÿÿÿÿÿ8•ζαδώ1
-
-java:S1130ά"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Ϋ’χΓψÿÿÿÿ8 ζαδώ1
-m
-java:S1858ρ"J"jsonObj" is already a string, there's no need to call "toString()" on it.(µΫά•ωÿÿÿÿ8©ζαδώ1
-F	java:S108ς")Either remove or fill this block of code.(”ύΎ8ªζαδώ1
-O
-java:S1172«"1Remove this unused method parameter "resultType".(ΰ£­‡8³ζαδώ1
-K	java:S108°")Either remove or fill this block of code.(Ί§Ιÿύÿÿÿÿ8µζαδώ1
-S
-java:S1751Λ"6Remove this "return" statement or make it conditional.(ΥΈ¦"8Ηζαδώ1
-T
-java:S1751Ρ"6Remove this "return" statement or make it conditional.(ΪφΔ8Θζαδώ1
