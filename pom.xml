@@ -33,6 +33,10 @@
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
         <knife4j.version>3.0.3</knife4j.version>
+        <maven.model.version>3.9.7</maven.model.version>
+        <maven.invoker.version>3.3.0</maven.invoker.version>
+        <gson.version>2.8.5</gson.version>
+        <guava.version>21.0</guava.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -155,7 +159,29 @@
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha.version}</version>
             </dependency>
-
+            <!--maven-->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-model</artifactId>
+                <version>${maven.model.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.shared</groupId>
+                <artifactId>maven-invoker</artifactId>
+                <version>${maven.invoker.version}</version>
+            </dependency>
+            <!--JSON-->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <!--guava-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <!-- 定时任务-->
             <dependency>
                 <groupId>com.gyd</groupId>

@@ -194,9 +194,9 @@ public class JobInvokeUtil
     }
 
 //    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-//        String invokeTarget = "com.wondersgroup.biz.task.ParamBean('bob'#10)@class";
+//        String invokeTarget = "com.gyd.quartz.task.ParamBean('bob'#10)@class";
 //        System.out.println(getInstance(invokeTarget));
-//        invokeTarget = "com.wondersgroup.biz.task.Param2Bean(1D#20)@class";
+//        invokeTarget = "com.gyd.quartz.task.Param2Bean(1D#20)@class";
 //        System.out.println(getInstance(invokeTarget));
 //    }
 

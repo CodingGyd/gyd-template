@@ -55,6 +55,44 @@ public class SysJob extends BaseEntity
     @Excel(name = "任务状态", readConverterExp = "0=正常,1=暂停")
     private String status;
 
+    /**
+     *   业务代码jar包坐标
+     */
+    private String mavenPom;
+    /**
+     * 所属业务
+     */
+    private String bizType;
+
+    /**
+     * 对象类型的参数（一个任务目前只支持一个对象类型参数，且需要在任务方法的第一个参数位置）
+     */
+    private String paramJson ;
+
+    public String getBizType() {
+        return bizType;
+    }
+
+    public void setBizType(String bizType) {
+        this.bizType = bizType;
+    }
+
+    public String getParamJson() {
+        return paramJson;
+    }
+
+    public void setParamJson(String paramJson) {
+        this.paramJson = paramJson;
+    }
+
+    public String getMavenPom() {
+        return mavenPom;
+    }
+
+    public void setMavenPom(String mavenPom) {
+        this.mavenPom = mavenPom;
+    }
+
     public Long getJobId()
     {
         return jobId;
