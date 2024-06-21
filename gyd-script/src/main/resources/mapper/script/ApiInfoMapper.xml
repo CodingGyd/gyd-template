@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyd.script.mapper.ApiInfoMapper">
+    
+    <resultMap type="ApiInfo" id="ApiInfoResult">
+        <result property="apiId"    column="api_id"    />
+        <result property="siteName"    column="site_name"    />
+        <result property="siteUrl"    column="site_url"    />
+        <result property="status"    column="status"    />
+        <result property="delFlag"    column="del_flag"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+        <result property="apiName"    column="api_name"    />
+        <result property="apiUrl"    column="api_url"    />
+        <result property="apiParams"    column="api_params"    />
+        <result property="apiMethod"    column="api_method"    />
+        <result property="apiHeaders"    column="api_headers"    />
+    </resultMap>
+
+    <sql id="selectApiInfoVo">
+        select api_id, site_name, site_url, status, del_flag, create_by, create_time, update_by, update_time, remark, api_name, api_url, api_params, api_method, api_headers from api_info
+    </sql>
+
+    <select id="selectApiInfoList" parameterType="ApiInfo" resultMap="ApiInfoResult">
+        <include refid="selectApiInfoVo"/>
+        <where>  
+            <if test="siteName != null  and siteName != ''"> and site_name like concat('%', #{siteName}, '%')</if>
+            <if test="siteUrl != null  and siteUrl != ''"> and site_url = #{siteUrl}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="apiName != null  and apiName != ''"> and api_name like concat('%', #{apiName}, '%')</if>
+            <if test="apiUrl != null  and apiUrl != ''"> and api_url = #{apiUrl}</if>
+            <if test="apiParams != null  and apiParams != ''"> and api_params = #{apiParams}</if>
+            <if test="apiMethod != null  and apiMethod != ''"> and api_method = #{apiMethod}</if>
+            <if test="apiHeaders != null  and apiHeaders != ''"> and api_headers = #{apiHeaders}</if>
+        </where>
+    </select>
+    
+    <select id="selectApiInfoByApiId" parameterType="Long" resultMap="ApiInfoResult">
+        <include refid="selectApiInfoVo"/>
+        where api_id = #{apiId}
+    </select>
+
+    <insert id="insertApiInfo" parameterType="ApiInfo" useGeneratedKeys="true" keyProperty="apiId">
+        insert into api_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="siteName != null and siteName != ''">site_name,</if>
+            <if test="siteUrl != null and siteUrl != ''">site_url,</if>
+            <if test="status != null">status,</if>
+            <if test="delFlag != null">del_flag,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+            <if test="apiName != null">api_name,</if>
+            <if test="apiUrl != null">api_url,</if>
+            <if test="apiParams != null">api_params,</if>
+            <if test="apiMethod != null">api_method,</if>
+            <if test="apiHeaders != null">api_headers,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="siteName != null and siteName != ''">#{siteName},</if>
+            <if test="siteUrl != null and siteUrl != ''">#{siteUrl},</if>
+            <if test="status != null">#{status},</if>
+            <if test="delFlag != null">#{delFlag},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="apiName != null">#{apiName},</if>
+            <if test="apiUrl != null">#{apiUrl},</if>
+            <if test="apiParams != null">#{apiParams},</if>
+            <if test="apiMethod != null">#{apiMethod},</if>
+            <if test="apiHeaders != null">#{apiHeaders},</if>
+         </trim>
+    </insert>
+
+    <update id="updateApiInfo" parameterType="ApiInfo">
+        update api_info
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="siteName != null and siteName != ''">site_name = #{siteName},</if>
+            <if test="siteUrl != null and siteUrl != ''">site_url = #{siteUrl},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="delFlag != null">del_flag = #{delFlag},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="apiName != null">api_name = #{apiName},</if>
+            <if test="apiUrl != null">api_url = #{apiUrl},</if>
+            <if test="apiParams != null">api_params = #{apiParams},</if>
+            <if test="apiMethod != null">api_method = #{apiMethod},</if>
+            <if test="apiHeaders != null">api_headers = #{apiHeaders},</if>
+        </trim>
+        where api_id = #{apiId}
+    </update>
+
+    <delete id="deleteApiInfoByApiId" parameterType="Long">
+        delete from api_info where api_id = #{apiId}
+    </delete>
+
+    <delete id="deleteApiInfoByApiIds" parameterType="String">
+        delete from api_info where api_id in 
+        <foreach item="apiId" collection="array" open="(" separator="," close=")">
+            #{apiId}
+        </foreach>
+    </delete>
+</mapper>

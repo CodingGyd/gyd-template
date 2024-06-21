@@ -22,8 +22,8 @@ import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.StringUtils;
 import com.gyd.common.utils.poi.ExcelUtil;
-import com.gyd.tool.service.ISysDictDataService;
-import com.gyd.tool.service.ISysDictTypeService;
+import com.gyd.script.service.ISysDictDataService;
+import com.gyd.script.service.ISysDictTypeService;
 
 /**
  * 数据字典信息

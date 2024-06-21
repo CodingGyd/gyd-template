@@ -17,8 +17,8 @@ import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.poi.ExcelUtil;
 import com.gyd.framework.web.service.SysPasswordService;
-import com.gyd.tool.domain.SysLogininfor;
-import com.gyd.tool.service.ISysLogininforService;
+import com.gyd.script.domain.SysLogininfor;
+import com.gyd.script.service.ISysLogininforService;
 
 /**
  * 系统访问记录

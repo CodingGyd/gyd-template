@@ -19,8 +19,8 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.poi.ExcelUtil;
-import com.gyd.tool.domain.SysPost;
-import com.gyd.tool.service.ISysPostService;
+import com.gyd.script.domain.SysPost;
+import com.gyd.script.service.ISysPostService;
 
 /**
  * 岗位信息操作处理

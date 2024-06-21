@@ -9,7 +9,7 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.domain.model.RegisterBody;
 import com.gyd.common.utils.StringUtils;
 import com.gyd.framework.web.service.SysRegisterService;
-import com.gyd.tool.service.ISysConfigService;
+import com.gyd.script.service.ISysConfigService;
 
 /**
  * 注册验证

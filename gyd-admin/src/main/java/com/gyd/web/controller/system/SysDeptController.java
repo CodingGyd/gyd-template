@@ -20,7 +20,7 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.domain.entity.SysDept;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.StringUtils;
-import com.gyd.tool.service.ISysDeptService;
+import com.gyd.script.service.ISysDeptService;
 
 /**
  * 部门信息

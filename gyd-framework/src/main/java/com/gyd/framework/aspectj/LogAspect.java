@@ -30,7 +30,7 @@ import com.gyd.common.utils.ServletUtils;
 import com.gyd.common.utils.StringUtils;
 import com.gyd.common.utils.ip.IpUtils;
 import com.gyd.framework.manager.factory.AsyncFactory;
-import com.gyd.tool.domain.SysOperLog;
+import com.gyd.script.domain.SysOperLog;
 
 /**
  * 操作日志记录处理

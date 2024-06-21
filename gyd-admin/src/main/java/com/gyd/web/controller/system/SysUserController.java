@@ -27,10 +27,10 @@ import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.SecurityUtils;
 import com.gyd.common.utils.StringUtils;
 import com.gyd.common.utils.poi.ExcelUtil;
-import com.gyd.tool.service.ISysDeptService;
-import com.gyd.tool.service.ISysPostService;
-import com.gyd.tool.service.ISysRoleService;
-import com.gyd.tool.service.ISysUserService;
+import com.gyd.script.service.ISysDeptService;
+import com.gyd.script.service.ISysPostService;
+import com.gyd.script.service.ISysRoleService;
+import com.gyd.script.service.ISysUserService;
 
 /**
  * 用户信息

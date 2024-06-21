@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.gyd.common.constant.CacheConstants;
 import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.utils.StringUtils;
-import com.gyd.tool.domain.SysCache;
+import com.gyd.script.domain.SysCache;
 
 /**
  * 缓存监控

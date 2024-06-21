@@ -1,10 +1,8 @@
 package com.gyd.quartz.service.impl;
 
-import com.gyd.common.utils.http.HttpUtils;
 import com.gyd.common.utils.http.OkHttpUtils;
 import com.gyd.common.utils.uuid.UUID;
 import com.gyd.quartz.service.IJueJinService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,15 +25,16 @@ public class JueJinServiceImpl implements IJueJinService {
     }
 
     public static void main(String[] args) {
+        String sessionid = "d67bfb7e87a0ef673bb1433c0cb969a3";// 通过登录接口获取！！
         Map<String,Object> params = new HashMap<>();
-        params.put("aid",2608);
-        params.put("uuid", UUID.randomUUID().toString().replaceAll("-",""));
-        params.put("spider",0);
-        params.put("msToken","SpCN8_JtiHRBM-MCMRPNyeZqDpoG8o-6PEghKyv2vSvsT1CoocAx5rqBk7kshXr7WiRuUr101NLCLL8RWAyvlPSC-hcTD7j-GMfgEVM-M1Js24r-BZ9RgIYKcX7_rA%3D%3D");
-        params.put("a_bogus","Qj0Yvc2uMsm1p73Fb7kz9SgEAgD0YW4RgZEPezTXBUqz");
+//        params.put("aid",2608);
+//        params.put("uuid", UUID.randomUUID().toString().replaceAll("-",""));
+//        params.put("spider",0);
+//        params.put("msToken","SpCN8_JtiHRBM-MCMRPNyeZqDpoG8o-6PEghKyv2vSvsT1CoocAx5rqBk7kshXr7WiRuUr101NLCLL8RWAyvlPSC-hcTD7j-GMfgEVM-M1Js24r-BZ9RgIYKcX7_rA%3D%3D");
+//        params.put("a_bogus","Qj0Yvc2uMsm1p73Fb7kz9SgEAgD0YW4RgZEPezTXBUqz");
 
         Map<String,String> headers = new HashMap<>();
-        headers.put("Cookie","sessionid=2312d0630013ae8c690d81a85ff866d9;");
+        headers.put("Cookie","sessionid="+sessionid+";");
         String url = "https://api.juejin.cn/growth_api/v1/check_in";
         String result = OkHttpUtils.executePostRequestV2(url,headers,params);
         System.out.println(result);

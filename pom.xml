@@ -217,7 +217,7 @@
                 <version>${gyd.version}</version>
             </dependency>
 
-            <!-- 通用工具-->
+            <!-- 公用模块-->
             <dependency>
                 <groupId>com.gyd</groupId>
                 <artifactId>gyd-common</artifactId>
@@ -230,7 +230,12 @@
                 <artifactId>gyd-mt</artifactId>
                 <version>${gyd.version}</version>
             </dependency>
-
+            <!-- 网络小工具-->
+            <dependency>
+                <groupId>com.gyd</groupId>
+                <artifactId>gyd-script</artifactId>
+                <version>${gyd.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -242,7 +247,7 @@
         <module>gyd-generator</module>
         <module>gyd-common</module>
         <module>gyd-mt</module>
-        <module>gyd-tool</module>
+        <module>gyd-script</module>
     </modules>
     <packaging>pom</packaging>
     <build>

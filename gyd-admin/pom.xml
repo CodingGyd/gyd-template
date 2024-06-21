@@ -68,7 +68,7 @@
         <!-- 网络小工具-->
         <dependency>
             <groupId>com.gyd</groupId>
-            <artifactId>gyd-tool</artifactId>
+            <artifactId>gyd-script</artifactId>
         </dependency>
 
         <!--lombok-->

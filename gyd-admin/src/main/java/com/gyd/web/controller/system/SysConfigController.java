@@ -19,8 +19,8 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.poi.ExcelUtil;
-import com.gyd.tool.domain.SysConfig;
-import com.gyd.tool.service.ISysConfigService;
+import com.gyd.script.domain.SysConfig;
+import com.gyd.script.service.ISysConfigService;
 
 /**
  * 参数配置 信息操作处理

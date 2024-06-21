@@ -20,8 +20,8 @@ import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.core.redis.RedisCache;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.StringUtils;
-import com.gyd.tool.domain.SysUserOnline;
-import com.gyd.tool.service.ISysUserOnlineService;
+import com.gyd.script.domain.SysUserOnline;
+import com.gyd.script.service.ISysUserOnlineService;
 
 /**
  * 在线用户监控

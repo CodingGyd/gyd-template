@@ -21,7 +21,7 @@ import com.gyd.common.utils.StringUtils;
 import com.gyd.common.utils.file.FileUploadUtils;
 import com.gyd.common.utils.file.MimeTypeUtils;
 import com.gyd.framework.web.service.TokenService;
-import com.gyd.tool.service.ISysUserService;
+import com.gyd.script.service.ISysUserService;
 
 /**
  * 个人信息 业务处理
