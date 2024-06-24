@@ -1,12 +1,21 @@
 package com.gyd.script.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
+import com.alibaba.fastjson2.TypeReference;
 import com.gyd.common.utils.DateUtils;
+import com.gyd.common.utils.http.OkHttpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.gyd.script.mapper.ApiInfoMapper;
 import com.gyd.script.domain.ApiInfo;
 import com.gyd.script.service.IApiInfoService;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 网站接口信息Service业务层处理
@@ -51,6 +60,7 @@ public class ApiInfoServiceImpl implements IApiInfoService
      * @return 结果
      */
     @Override
+    @Transactional(isolation = Isolation.READ_COMMITTED)
     public int insertApiInfo(ApiInfo apiInfo)
     {
         apiInfo.setCreateTime(DateUtils.getNowDate());
@@ -92,5 +102,16 @@ public class ApiInfoServiceImpl implements IApiInfoService
     public int deleteApiInfoByApiId(Long apiId)
     {
         return apiInfoMapper.deleteApiInfoByApiId(apiId);
+    }
+
+    @Override
+    public String exec(ApiInfo apiInfo) {
+        Map<String,String> headers = JSONObject.parseObject(apiInfo.getApiHeaders(), new TypeReference<Map<String,String>>() {
+        });
+        Map<String,Object> apiParams = JSONObject.parseObject(apiInfo.getApiParams(), new TypeReference<Map<String,Object>>() {
+        });
+        String result = OkHttpUtils.executePostRequestV2(apiInfo.getApiUrl(),headers,apiParams);
+        System.out.println(result);
+        return result;
     }
 }

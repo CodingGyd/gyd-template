@@ -101,7 +101,7 @@ public class ApiInfoController extends BaseController
     @Log(title = "网站接口执行调用", businessType = BusinessType.OTHER)
     @PostMapping(value = "exec")
     public AjaxResult exec(@RequestBody ApiInfo apiInfo) {
-        return toAjax(apiInfoService.updateApiInfo(apiInfo));
+        return success(apiInfoService.exec(apiInfo));
     }
 
 

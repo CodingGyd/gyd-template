@@ -58,4 +58,12 @@ public interface IApiInfoService
      * @return 结果
      */
     public int deleteApiInfoByApiId(Long apiId);
+
+    /**
+     * 执行脚本
+     *
+     * @param apiInfo 网站接口信息
+     * @return 结果
+     */
+    public String exec(ApiInfo apiInfo);
 }

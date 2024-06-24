@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gyd.common.core.domain.BaseEntity;
 import com.gyd.common.utils.StringUtils;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.util.Calendar;
 import java.util.Date;

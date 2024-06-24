@@ -148,20 +148,7 @@ public class ApiInfo extends BaseEntity
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
             .append("apiId", getApiId())
-            .append("siteName", getSiteName())
-            .append("siteUrl", getSiteUrl())
-            .append("status", getStatus())
-            .append("delFlag", getDelFlag())
-            .append("createBy", getCreateBy())
-            .append("createTime", getCreateTime())
-            .append("updateBy", getUpdateBy())
-            .append("updateTime", getUpdateTime())
-            .append("remark", getRemark())
             .append("apiName", getApiName())
-            .append("apiUrl", getApiUrl())
-            .append("apiParams", getApiParams())
-            .append("apiMethod", getApiMethod())
-            .append("apiHeaders", getApiHeaders())
             .toString();
     }
 }

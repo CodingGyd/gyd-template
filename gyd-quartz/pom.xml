@@ -33,6 +33,11 @@
             <groupId>com.gyd</groupId>
             <artifactId>gyd-mt</artifactId>
         </dependency>
+        <!-- i茅台定时任务-->
+        <dependency>
+            <groupId>com.gyd</groupId>
+            <artifactId>gyd-script</artifactId>
+        </dependency>
         <!-- 通用工具-->
         <dependency>
             <groupId>com.gyd</groupId>

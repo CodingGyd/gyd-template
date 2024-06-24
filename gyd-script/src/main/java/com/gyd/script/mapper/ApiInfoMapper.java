@@ -1,6 +1,8 @@
 package com.gyd.script.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.gyd.script.domain.ApiInfo;
 
 /**
@@ -9,7 +11,7 @@ import com.gyd.script.domain.ApiInfo;
  * @author gyd
  * @date 2024-06-21
  */
-public interface ApiInfoMapper 
+public interface ApiInfoMapper extends BaseMapper<ApiInfo>
 {
     /**
      * 查询网站接口信息

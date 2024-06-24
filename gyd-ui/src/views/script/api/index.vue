@@ -322,7 +322,7 @@ export default {
     handleExec(row) {
       this.reset();
       execApi(row).then(response => {
-        this.$modal.msgSuccess("操作成功");
+        this.$modal.msgSuccess(response.msg);
       });
     },
 
