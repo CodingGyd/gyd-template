@@ -74,8 +74,9 @@
 	<!-- 系统模块日志级别控制  -->
 	<logger name="com.gyd" level="debug" />
 	<!-- Spring日志级别控制  -->
-	<logger name="org.springframework" level="warn" />
-
+	<logger name="org.springframework" level="debug" />
+    <!-- Spring日志级别控制  -->
+    <logger name="org.springframework" level="debug" />
 	<root level="debug">
 		<appender-ref ref="console" />
 	</root>

@@ -120,7 +120,7 @@ export default {
     return {
       // 版本号
       version: "0.0.1",
-      frameworkVersion: "3.8.7"
+      frameworkVersion: "3.8.8"
     };
   },
   methods: {

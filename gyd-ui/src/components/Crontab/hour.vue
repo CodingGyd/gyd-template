@@ -51,6 +51,12 @@ export default {
 	methods: {
 		// 单选按钮值变化时
 		radioChange() {
+      if (this.cron.min === '*') {
+        this.$emit('update', 'min', '0', 'hour');
+      }
+      if (this.cron.second === '*') {
+        this.$emit('update', 'second', '0', 'hour');
+      }
 			switch (this.radioValue) {
 				case 1:
         	this.$emit('update', 'hour', '*')
