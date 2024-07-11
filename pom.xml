@@ -6,14 +6,14 @@
 
     <groupId>com.gyd</groupId>
     <artifactId>gyd</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
 
     <name>gyd</name>
     <url>http://www.gydblog.com</url>
     <description>代码小郭后台管理系统</description>
 
     <properties>
-        <gyd.version>0.0.1</gyd.version>
+        <gyd.version>1.0.0</gyd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
