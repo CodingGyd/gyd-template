@@ -119,7 +119,7 @@ export default {
   data() {
     return {
       // 版本号
-      version: "0.0.1",
+      version: "1.0.0",
       frameworkVersion: "3.8.8"
     };
   },
