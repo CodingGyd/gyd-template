@@ -13,7 +13,7 @@ import javax.annotation.PreDestroy;
 @Component
 public class ShutdownManager
 {
-    private static final Logger logger = LoggerFactory.getLogger("sys-user");
+    private static final Logger logger = LoggerFactory.getLogger(ShutdownManager.class);
 
     @PreDestroy
     public void destroy()

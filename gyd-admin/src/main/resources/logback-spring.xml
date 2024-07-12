@@ -1,110 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <!-- 日志存放路径 -->
-	<property name="log.path" value="logs" />
-    <!-- 日志输出格式 -->
-	<property name="log.pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{20} - [%method,%line] - %msg%n" />
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
+    <property name="LOG_HOME" value="logs" />
+    <property name="LOG_LEVEL" value="info" />
+    <property name="LOG_STDOUT_ENABLED" value="true" />
 
-	<!-- 控制台输出 -->
-	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<pattern>${log.pattern}</pattern>
-		</encoder>
-	</appender>
-	
-	<!-- 系统日志输出 -->
-	<appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log.path}/sys-info.log</file>
-        <!-- 循环政策：基于时间创建日志文件 -->
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 日志文件名格式 -->
-			<fileNamePattern>${log.path}/sys-info.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<!-- 日志最大的历史 60天 -->
-			<maxHistory>60</maxHistory>
-		</rollingPolicy>
-		<encoder>
-			<pattern>${log.pattern}</pattern>
-		</encoder>
-		<filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <!-- 过滤的级别 -->
-            <level>DEBUG</level>
-            <!-- 匹配时的操作：接收（记录） -->
-            <onMatch>ACCEPT</onMatch>
-            <!-- 不匹配时的操作：拒绝（不记录） -->
-            <onMismatch>DENY</onMismatch>
-        </filter>
-	</appender>
-	
-	<appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log.path}/sys-error.log</file>
-        <!-- 循环政策：基于时间创建日志文件 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 日志文件名格式 -->
-            <fileNamePattern>${log.path}/sys-error.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<!-- 日志最大的历史 60天 -->
-			<maxHistory>60</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>${log.pattern}</pattern>
-        </encoder>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <!-- 过滤的级别 -->
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 日志输出编码 -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{26} %L - %msg%n</pattern>
+        </layout>
+    </appender>
+    <!-- 按照每天生成日志文件 -->
+    <appender name="ERROR"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
-			<!-- 匹配时的操作：接收（记录） -->
-            <onMatch>ACCEPT</onMatch>
-			<!-- 不匹配时的操作：拒绝（不记录） -->
-            <onMismatch>DENY</onMismatch>
         </filter>
-    </appender>
-	
-	<!-- 用户访问日志输出  -->
-    <appender name="sys-user" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${log.path}/sys-user.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 按天回滚 daily -->
-            <fileNamePattern>${log.path}/sys-user.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <!-- 日志最大的历史 60天 -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
         <encoder>
-            <pattern>${log.pattern}</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{5} %L -%msg%n</pattern>
+            <charset>utf8</charset>
         </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名 -->
+            <FileNamePattern>${LOG_HOME}/error/%d{yyyy-MM-dd}.%i.error.log</FileNamePattern>
+            <!--<MaxHistory>30</MaxHistory> -->
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>200MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
     </appender>
-	
-	<!-- 系统模块日志级别控制  -->
-	<logger name="com.gyd" level="debug" />
-	<!-- Spring日志级别控制  -->
-	<logger name="org.springframework" level="error" />
-    <!--设置一些系统组件的日志输出级别-->
-    <Logger name="org.springframework.beans.TypeConverterDelegate" level="error"/>
-    <Logger name="org.hibernate" level="info"/>
-    <Logger name="jdbc.resultset" level="error"/>
-    <Logger name="jdbc.connection" level="error"/>
-    <Logger name="jdbc.audit" level="error"/>
-    <Logger name="org.apache.commons.beanutils" level="error"/>
-    <Logger name="org.jxls" level="error"/>
-    <Logger name="org.apache.commons.jexl2" level="error"/>
-    <Logger name="org.apache.zookeeper" level="warn"/>
-    <Logger name="com.alibaba.dubbo" level="warn"/>
-    <Logger name="org.apache.dubbo" level="warn"/>
-    <Logger name="org.activiti" level="warn"/>
-    <Logger name="net.sf.ehcache" level="warn"/>
-    <Logger name="com.ctrip.framework.apollo" level="info"/>
-    <Logger name="org.springframework.session.data.redis" level="error"/>
-    <Logger name="org.hibernate.hql.internal.ast.HqlSqlWalker" level="error"/>
-    <Logger name="org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener" level="warn"/>
-    <Logger name="org.quartz.core.QuartzSchedulerThread" level="warn"/>
-    <Logger name="com.alibaba.dubbo.config.spring.extension.SpringExtensionFactory" level="error"/>
-    <Logger name="org.apache.dubbo.config.spring.extension.SpringExtensionFactory" level="error"/>
-    <Logger name="org.springframework.boot.web.servlet.support.ErrorPageFilter"  level="off"/>
-	<root level="debug">
-		<appender-ref ref="console" />
-        <appender-ref ref="file_info" />
-        <appender-ref ref="file_error" />
-	</root>
-	
-	<!--系统用户操作日志-->
-    <logger name="sys-user" level="debug">
-        <appender-ref ref="sys-user"/>
-    </logger>
-</configuration> 
+
+    <!-- 按照每天生成日志文件 -->
+    <appender name="MonitorAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名 -->
+            <FileNamePattern>${LOG_HOME}/monitor/%d{yyyy-MM-dd}_monitor.log</FileNamePattern>
+            <!--<MaxHistory>30</MaxHistory> -->
+        </rollingPolicy>
+    </appender>
+    <!-- 按照每天生成日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{5} - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名 -->
+            <FileNamePattern>${LOG_HOME}/info/%d{yyyy-MM-dd}.%i.info.log</FileNamePattern>
+            <!--<MaxHistory>30</MaxHistory> -->
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>200MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <logger name="java.sql.Connection" level="${LOG_LEVEL}" />
+    <logger name="java.sql.Statement" level="${LOG_LEVEL}" />
+    <logger name="java.sql.PreparedStatement" level="${LOG_LEVEL}" />
+    <logger name="org.springframework" level="error" />
+    <logger name="org.eclipse" level="info" />
+    <logger name="org.hibernate" level="info" />
+    <logger name="org.jboss" level="info" />
+    <logger name="springfox.documentation" level="info" />
+    <logger name="org.mybatis" level="info" />
+    <logger name="org.ibatis" level="info" />
+    <logger name="org.apache.http" level="info" />
+    <logger name="org.apache.http" level="info" />
+    <logger name="com.alibaba.druid" level="info" />
+    <logger name="org.apache.shiro" level="info" />
+    <logger name="org.apache.commons.beanutils" level="info" />
+    <logger name="org.apache.commons.httpclient" level="info" />
+    <logger name="org.apache.axis2" level="info" />
+    <logger name="org.apache.axiom" level="info" />
+    <logger name="httpclient.wire" level="info" />
+    <!-- 日志输出级别 -->
+    <root level="${LOG_LEVEL}">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="ERROR" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
