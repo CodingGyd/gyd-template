@@ -10,10 +10,10 @@ import com.gyd.common.utils.StringUtils;
 import com.gyd.common.utils.ip.AddressUtils;
 import com.gyd.common.utils.ip.IpUtils;
 import com.gyd.common.utils.spring.SpringUtils;
-import com.gyd.script.domain.SysLogininfor;
-import com.gyd.script.domain.SysOperLog;
-import com.gyd.script.service.ISysLogininforService;
-import com.gyd.script.service.ISysOperLogService;
+import com.gyd.system.domain.SysLogininfor;
+import com.gyd.system.domain.SysOperLog;
+import com.gyd.system.service.ISysLogininforService;
+import com.gyd.system.service.ISysOperLogService;
 import eu.bitwalker.useragentutils.UserAgent;
 
 /**

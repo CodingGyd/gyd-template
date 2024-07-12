@@ -20,7 +20,7 @@ import com.gyd.common.core.domain.entity.SysDictType;
 import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.poi.ExcelUtil;
-import com.gyd.script.service.ISysDictTypeService;
+import com.gyd.system.service.ISysDictTypeService;
 
 /**
  * 数据字典信息

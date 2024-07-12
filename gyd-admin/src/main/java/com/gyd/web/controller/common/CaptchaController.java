@@ -18,7 +18,7 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.redis.RedisCache;
 import com.gyd.common.utils.sign.Base64;
 import com.gyd.common.utils.uuid.IdUtils;
-import com.gyd.script.service.ISysConfigService;
+import com.gyd.system.service.ISysConfigService;
 
 /**
  * 验证码操作处理

@@ -19,7 +19,7 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.domain.entity.SysMenu;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.StringUtils;
-import com.gyd.script.service.ISysMenuService;
+import com.gyd.system.service.ISysMenuService;
 
 /**
  * 菜单信息

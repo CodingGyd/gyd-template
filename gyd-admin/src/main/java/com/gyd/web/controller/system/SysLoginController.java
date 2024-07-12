@@ -15,7 +15,7 @@ import com.gyd.common.core.domain.model.LoginBody;
 import com.gyd.common.utils.SecurityUtils;
 import com.gyd.framework.web.service.SysLoginService;
 import com.gyd.framework.web.service.SysPermissionService;
-import com.gyd.script.service.ISysMenuService;
+import com.gyd.system.service.ISysMenuService;
 
 /**
  * 登录验证

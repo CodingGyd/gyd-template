@@ -16,8 +16,8 @@ import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
 import com.gyd.common.utils.poi.ExcelUtil;
-import com.gyd.script.domain.SysOperLog;
-import com.gyd.script.service.ISysOperLogService;
+import com.gyd.system.domain.SysOperLog;
+import com.gyd.system.service.ISysOperLogService;
 
 /**
  * 操作日志记录

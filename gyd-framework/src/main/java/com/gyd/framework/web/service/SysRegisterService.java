@@ -15,8 +15,8 @@ import com.gyd.common.utils.MessageUtils;
 import com.gyd.common.utils.SecurityUtils;
 import com.gyd.common.utils.StringUtils;
 import com.gyd.framework.manager.factory.AsyncFactory;
-import com.gyd.script.service.ISysConfigService;
-import com.gyd.script.service.ISysUserService;
+import com.gyd.system.service.ISysConfigService;
+import com.gyd.system.service.ISysUserService;
 
 /**
  * 注册校验方法

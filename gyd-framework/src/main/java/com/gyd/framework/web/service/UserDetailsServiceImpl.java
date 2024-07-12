@@ -13,7 +13,7 @@ import com.gyd.common.enums.UserStatus;
 import com.gyd.common.exception.ServiceException;
 import com.gyd.common.utils.MessageUtils;
 import com.gyd.common.utils.StringUtils;
-import com.gyd.script.service.ISysUserService;
+import com.gyd.system.service.ISysUserService;
 
 /**
  * 用户验证处理

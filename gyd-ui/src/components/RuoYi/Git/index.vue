@@ -9,7 +9,7 @@ export default {
   name: 'RuoYiGit',
   data() {
     return {
-      url: 'https://github.com/CodingGyd'
+      url: 'https://github.com/CodingGyd/gyd-template'
     }
   },
   methods: {

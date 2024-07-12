@@ -17,8 +17,8 @@ import com.gyd.common.core.controller.BaseController;
 import com.gyd.common.core.domain.AjaxResult;
 import com.gyd.common.core.page.TableDataInfo;
 import com.gyd.common.enums.BusinessType;
-import com.gyd.script.domain.SysNotice;
-import com.gyd.script.service.ISysNoticeService;
+import com.gyd.system.domain.SysNotice;
+import com.gyd.system.service.ISysNoticeService;
 
 /**
  * 公告 信息操作处理

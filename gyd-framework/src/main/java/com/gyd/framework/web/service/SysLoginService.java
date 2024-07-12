@@ -25,8 +25,8 @@ import com.gyd.common.exception.user.CaptchaExpireException;
 import com.gyd.common.exception.user.UserNotExistsException;
 import com.gyd.common.exception.user.UserPasswordNotMatchException;
 import com.gyd.common.utils.ip.IpUtils;
-import com.gyd.script.service.ISysConfigService;
-import com.gyd.script.service.ISysUserService;
+import com.gyd.system.service.ISysConfigService;
+import com.gyd.system.service.ISysUserService;
 
 /**
  * 登录校验方法

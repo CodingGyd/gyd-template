@@ -5,7 +5,7 @@
       <el-col :sm="24" :lg="12" style="padding-left: 20px">
         <h2>代码小郭后台管理系统</h2>
         <p>
-          一直想做一款自己的通用后台管理系统（伴随自己的码农职业生涯），看了很多优秀的开源项目发现了一款若依管理系统。于是利用空闲休息时间基于若依开发了代码小郭后台管理系统（代码小郭是我的网名）。系统会陆续更新一些实用功能。
+          一直想做一款自己的通用后台管理系统（伴随自己的码农生涯），秉承着站在巨人的肩膀写代码和不重复造轮子的原则，看了很多优秀的开源项目并发现了一款若依管理系统。于是利用空闲休息时间基于若依框架开发了代码小郭后台管理系统（代码小郭是我的网名）。系统会陆续更新一些实用功能。
         </p>
         <p>
           <b>当前版本:</b> <span>v{{ version }}</span>
@@ -22,7 +22,7 @@
             size="mini"
             icon="el-icon-cloudy"
             plain
-            @click="goTarget('https://github.com/CodingGyd')"
+            @click="goTarget('https://github.com/CodingGyd/gyd-template')"
             >访问代码仓库</el-button
           >
           <el-button
@@ -76,13 +76,6 @@
           <div slot="header" class="clearfix">
             <span>更新日志</span>
           </div>
-          <el-collapse accordion>
-            <el-collapse-item title="v1.0.1 - 2024-06-11">
-              <ol>
-                <li>集成开源项目campus-imaotai的功能，支持自动抢购茅台</li>
-              </ol>
-            </el-collapse-item>
-          </el-collapse>
           <el-collapse accordion>
             <el-collapse-item title="v1.0.0 - 2024-06-07">
               <ol>

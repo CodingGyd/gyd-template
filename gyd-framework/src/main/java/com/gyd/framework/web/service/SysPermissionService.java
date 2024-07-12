@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import com.gyd.common.core.domain.entity.SysRole;
 import com.gyd.common.core.domain.entity.SysUser;
-import com.gyd.script.service.ISysMenuService;
-import com.gyd.script.service.ISysRoleService;
+import com.gyd.system.service.ISysMenuService;
+import com.gyd.system.service.ISysRoleService;
 
 /**
  * 用户权限处理

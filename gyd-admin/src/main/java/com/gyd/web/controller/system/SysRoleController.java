@@ -26,10 +26,10 @@ import com.gyd.common.utils.StringUtils;
 import com.gyd.common.utils.poi.ExcelUtil;
 import com.gyd.framework.web.service.SysPermissionService;
 import com.gyd.framework.web.service.TokenService;
-import com.gyd.script.domain.SysUserRole;
-import com.gyd.script.service.ISysDeptService;
-import com.gyd.script.service.ISysRoleService;
-import com.gyd.script.service.ISysUserService;
+import com.gyd.system.domain.SysUserRole;
+import com.gyd.system.service.ISysDeptService;
+import com.gyd.system.service.ISysRoleService;
+import com.gyd.system.service.ISysUserService;
 
 /**
  * 角色信息
