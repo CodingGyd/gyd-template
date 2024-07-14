@@ -87,7 +87,7 @@ public class IShopServiceImpl extends ServiceImpl<IShopMapper, IShop> implements
 //            iShopMapper.insert(iShop);
             list.add(iShop);
         }
-        this.saveBatch(list);
+        this.saveBatch(list,100);
         redisCache.setCacheList("mt_shop_list", list);
     }
 
