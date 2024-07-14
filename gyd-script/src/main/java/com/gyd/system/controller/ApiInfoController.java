@@ -100,6 +100,7 @@ public class ApiInfoController extends BaseController
      */
     @Log(title = "网站接口执行调用", businessType = BusinessType.OTHER)
     @PostMapping(value = "exec")
+    @PreAuthorize("@ss.hasPermi('script:api:execute')")
     public AjaxResult exec(@RequestBody ApiInfo apiInfo) {
         return success(apiInfoService.exec(apiInfo));
     }
