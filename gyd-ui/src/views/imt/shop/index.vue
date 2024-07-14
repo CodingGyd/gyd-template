@@ -102,7 +102,7 @@
           icon="el-icon-refresh"
           size="mini"
           @click="handleRefresh"
-          >刷新i茅台商品列表</el-button
+          >刷新i茅台门店列表</el-button
         >
       </el-col>
       <right-toolbar
