@@ -58,7 +58,6 @@
             <groupId>com.gyd</groupId>
             <artifactId>gyd-system</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>

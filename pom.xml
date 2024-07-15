@@ -206,13 +206,6 @@
                 <version>${gyd.version}</version>
             </dependency>
 
-            <!-- 网络小工具-->
-            <dependency>
-                <groupId>com.gyd</groupId>
-                <artifactId>gyd-tool</artifactId>
-                <version>${gyd.version}</version>
-            </dependency>
-
             <!-- 核心模块-->
             <dependency>
                 <groupId>com.gyd</groupId>
@@ -246,6 +239,7 @@
                 <artifactId>gyd-script</artifactId>
                 <version>${gyd.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

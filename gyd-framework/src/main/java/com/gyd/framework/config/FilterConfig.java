@@ -3,6 +3,7 @@ package com.gyd.framework.config;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.DispatcherType;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -20,10 +21,10 @@ import com.gyd.common.utils.StringUtils;
 @Configuration
 public class FilterConfig
 {
-    @Value("${xss.excludes}")
+    @Value(value = "${xss.excludes}")
     private String excludes;
 
-    @Value("${xss.urlPatterns}")
+    @Value(value = "${xss.urlPatterns}")
     private String urlPatterns;
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
