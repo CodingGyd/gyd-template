@@ -5,16 +5,18 @@ import com.gyd.mt.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
  * i茅台定时任务
  */
-//@Configuration
-//@EnableScheduling
-@Component("imtTask")
+@Configuration
+@EnableScheduling
+//@Component("imtTask")
 public class IMTTask {
     private static final Logger logger = LoggerFactory.getLogger(IMTTask.class);
 
@@ -30,7 +32,9 @@ public class IMTTask {
     @Async
     @Scheduled(cron = "0 10 1 ? * * ")
     public void updateUserMinuteBatch() {
+        logger.info("job-updateUserMinuteBatch-begin");
         iUserService.updateUserMinuteBatch();
+        logger.info("job-updateUserMinuteBatch-end");
     }
 
 
@@ -40,7 +44,9 @@ public class IMTTask {
     @Async
     @Scheduled(cron = "0 0/1 11 ? * *")
     public void getTravelRewardBatch() {
+        logger.info("job-getTravelRewardBatch-begin");
         imtService.getTravelRewardBatch();
+        logger.info("job-getTravelRewardBatch-end");
 
     }
 
@@ -50,8 +56,9 @@ public class IMTTask {
     @Async
     @Scheduled(cron = "0 0/1 9 ? * *")
     public void reservationBatchTask() {
+        logger.info("job-reservationBatchTask-begin");
         imtService.reservationBatch();
-
+        logger.info("job-reservationBatchTask-end");
     }
 
 

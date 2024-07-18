@@ -453,10 +453,10 @@ public class IMTServiceImpl implements IMTService {
     @Async
     @Override
     public void reservationBatch() {
-//        int minute = DateUtil.minute(new Date());
-//        List<IUser> iUsers = iUserService.selectReservationUserByMinute(minute);
+        int minute = DateUtil.minute(new Date());
+        List<IUser> iUsers = iUserService.selectReservationUserByMinute(minute);
 
-        List<IUser> iUsers = iUserService.selectReservationUser();
+//        List<IUser> iUsers = iUserService.selectReservationUser();
         String curDate = DateUtils.dateTimeNow("yyyy-MM-dd");
 
         IAppointRecord record = null;
@@ -486,7 +486,6 @@ public class IMTServiceImpl implements IMTService {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
 
