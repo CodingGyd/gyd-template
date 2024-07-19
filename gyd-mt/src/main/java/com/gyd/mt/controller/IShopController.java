@@ -32,8 +32,8 @@ public class IShopController {
         return AjaxResult.success(page);
     }
 
-    @GetMapping(value = "/refresh", name = "刷新i茅台商品列表")
-    @ApiOperation("刷新i茅台商品列表")
+    @GetMapping(value = "/refresh", name = "刷新i茅台门店列表")
+    @ApiOperation("刷新i茅台门店列表")
     @PreAuthorize("@ss.hasPermi('imt:shop:refresh')")
     public AjaxResult refreshShop() {
         iShopService.refreshShop();
