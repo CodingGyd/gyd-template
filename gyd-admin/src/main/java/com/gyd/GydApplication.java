@@ -10,11 +10,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @author gyd
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
-public class GydApplication
-{
+public class GydApplication {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         // System.setProperty("spring.devtools.restart.enabled", "false");
         SpringApplication.run(GydApplication.class, args);

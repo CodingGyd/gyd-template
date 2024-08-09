@@ -7,6 +7,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.TypeReference;
 import com.gyd.common.utils.DateUtils;
 import com.gyd.common.utils.http.OkHttpUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.gyd.system.mapper.ApiInfoMapper;
@@ -22,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @date 2024-06-21
  */
 @Service
+@Slf4j
 public class ApiInfoServiceImpl implements IApiInfoService 
 {
     @Autowired
@@ -109,7 +111,7 @@ public class ApiInfoServiceImpl implements IApiInfoService
         Map<String,Object> apiParams = JSONObject.parseObject(apiInfo.getApiParams(), new TypeReference<Map<String,Object>>() {
         });
         String result = OkHttpUtils.executePostRequestV2(apiInfo.getApiUrl(),headers,apiParams);
-        System.out.println(result);
+        log.info("exec 结果："+result);
         return result;
     }
 }
